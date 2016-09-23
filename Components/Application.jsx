@@ -1,4 +1,10 @@
 import React, { Component, cloneElement } from 'react';
+ 
+/*
+//Component for each individual app
+import PortfolioApp from './Components/PortfolioApp';
+*/
+
 
 class Application extends Component {
 
@@ -26,9 +32,9 @@ class Application extends Component {
 			<div className="Application">
 
 				{
-					cloneElement(this.props.children, {
-					  //prop: var
-				  })
+					cloneElement(this.props.children
+					  //{prop: var}
+					  )
 				}
 
 			</div>
