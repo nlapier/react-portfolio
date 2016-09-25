@@ -8,8 +8,10 @@ import PortfolioApp from './Components/PortfolioApp';
 
 class Application extends Component {
 
-	constructor(props, context) {
-		super(props, context);
+	/*
+	//I only need constructor if this app will have state.  
+	constructor(...args) {
+		super(...args);
 
 		// this.toggleCompleted = this.toggleCompleted.bind(this);
 
@@ -23,9 +25,9 @@ class Application extends Component {
 		// 	}]
 		// };	
 	}
+	*/
 
 	render() {
-
 
 		return (
 

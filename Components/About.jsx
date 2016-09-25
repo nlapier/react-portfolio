@@ -32,7 +32,7 @@ class About extends Component {
 	}
 }
 
-export default ActivePage;
+export default About;
 
 /*
 

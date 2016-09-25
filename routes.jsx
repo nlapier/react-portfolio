@@ -9,7 +9,7 @@ import { Route } from 'react-router';
 import Application from './Components/Application';
 
 //About section
-import About from './Components/Application';
+import About from './Components/About';
 
 //Portfolio section
 import Portfolio from './Components/Portfolio';
