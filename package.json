@@ -2,18 +2,23 @@
   "name": "nlp-react-portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.config.js"
+    "start": "nodemon server",
+    "build": "webpack --config webpack.config.js",
+    "build:watch": "webpack --watch --config webpack.config.js"
   },
   "author": "Nathaniel LaPier",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
     "core-js": "^2.4.0",
+    "express": "^4.14.0",
     "lodash": "^4.16.1",
+    "path": "^0.12.7",
     "react": "^0.14.3",
+    "react-bootstrap": "^0.30.3",
     "react-dom": "^0.14.3",
     "react-router": "^2.8.1"
   },

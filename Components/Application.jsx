@@ -29,7 +29,6 @@ class Application extends Component {
 
 	render() {
 
-
 		return (
 
 			<div className="Application">
