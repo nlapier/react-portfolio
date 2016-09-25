@@ -25547,7 +25547,7 @@
 /* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -25577,65 +25577,65 @@
 		}
 
 		_createClass(About, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
 				//prop const here
 
 				return _react2.default.createElement(
-					'div',
+					"div",
 					null,
 					_react2.default.createElement(
-						'h1',
-						null,
-						'About Me'
+						"h1",
+						{ className: "text-center" },
+						"About Me"
 					),
 					_react2.default.createElement(
-						'p',
+						"p",
 						null,
-						'Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I’m not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word "y’all" to NYC.'
+						"Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I’m not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word \"y’all\" to NYC."
 					),
 					_react2.default.createElement(
-						'p',
+						"p",
 						null,
-						'In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:'
+						"In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:"
 					),
 					_react2.default.createElement(
-						'ul',
+						"ul",
 						null,
 						_react2.default.createElement(
-							'li',
+							"li",
 							null,
-							'jQuery'
+							"jQuery"
 						),
 						_react2.default.createElement(
-							'li',
+							"li",
 							null,
-							'Node.js'
+							"Node.js"
 						),
 						_react2.default.createElement(
-							'li',
+							"li",
 							null,
-							'Express.js'
+							"Express.js"
 						),
 						_react2.default.createElement(
-							'li',
+							"li",
 							null,
-							'Firebase'
+							"Firebase"
 						),
 						_react2.default.createElement(
-							'li',
+							"li",
 							null,
-							'MySQL'
+							"MySQL"
 						),
 						_react2.default.createElement(
-							'li',
+							"li",
 							null,
-							'MongoDB'
+							"MongoDB"
 						),
 						_react2.default.createElement(
-							'li',
+							"li",
 							null,
-							'React.js'
+							"React.js"
 						)
 					)
 				);

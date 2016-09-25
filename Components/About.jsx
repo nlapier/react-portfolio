@@ -7,7 +7,7 @@ class About extends Component {
 
 		return (
 			<div>
-				<h1>About Me</h1>
+				<h1 className="text-center">About Me</h1>
 
 				<p>
 					Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I&#8217;m not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word &#34;y&#8217;all&#34; to NYC.
