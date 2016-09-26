@@ -1,7 +1,4 @@
-.container-fluid{
-	/*background-image: url("../images/grey_@2X.png");*/
+body{
+	background-image: url("../images/grey_@2X.png");
 }
 
-h1 {
-	color: #DFF0D8;
-}
