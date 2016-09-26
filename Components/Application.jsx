@@ -1,4 +1,5 @@
 import React, { Component, cloneElement } from 'react';
+import Navbar from "./Navbar";
  
 /*
 //Component for each individual app
@@ -31,7 +32,10 @@ class Application extends Component {
 
 		return (
 
-			<div className="Application">
+			<div>
+				<Navbar bsStyle="inverse"/>
+
+				<div className="Application row">
 
 				{
 					cloneElement(this.props.children
@@ -39,7 +43,12 @@ class Application extends Component {
 					  )
 				}
 
+				</div>
+
+
 			</div>
+
+
 		)
 	}
 }
