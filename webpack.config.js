@@ -1,16 +1,14 @@
 module.exports = {
   
-  // This code will be compiled 
   entry: "./index.jsx",
 
-  // Then output into this file
   output: {
-    filename: "./public/bundle.js"
+    filename: "./public/bundle.js",
+    "publicPath": "/"
   },
 
   devtool: 'cheap-source-map',
 
-  // This will be what we do
   module: {
     loaders: [
       {
@@ -18,9 +16,19 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          // These are the specific transformations we'll be using. 
           presets: ['react', 'es2015']
         }
+      },
+      { 
+        test: /\.css$/, 
+        loader: 'style-loader!css-loader' 
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
       }
     ]
   },
@@ -30,3 +38,15 @@ module.exports = {
   }
 
 }
+
+/*
+      { 
+        test: /\.(png|jpg|jpeg|gif|woff)$/, 
+        loader: 'url-loader?limit=25000' 
+      },
+      { 
+        test: /\.(png|jpg|jpeg|gif|woff)$/, 
+        loader: 'file-loader' 
+      }
+
+*/
