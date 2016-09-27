@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Image } from "react-bootstrap";
+import Radium from "radium";
 
 class PortfolioApp extends Component {
 
@@ -8,14 +10,14 @@ class PortfolioApp extends Component {
 		return (
 			<div>
 
-				0
+			<Image src="/assets/thumbnail.png" responsive />
 				
 			</div>
 		);
 	}
 }
 
-export default PortfolioApp;
+export default Radium(PortfolioApp);
 
 /*
 

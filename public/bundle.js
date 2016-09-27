@@ -25520,34 +25520,20 @@
 
 		_createClass(Application, [{
 			key: "render",
-
-
-			/*
-	  //I only need constructor if this app will have state.  
-	  constructor(...args) {
-	  	super(...args);
-	  		// this.toggleCompleted = this.toggleCompleted.bind(this);
-	  		// this.addItem = this.addItem.bind(this);
-	  		// this.state = {
-	  	// 	items: [{
-	  	// 		id: 3,
-	  	// 		text: 'Laundry',
-	  	// 		isCompleted: true
-	  	// 	}]
-	  	// };	
-	  }
-	  */
-
 			value: function render() {
 
 				return _react2.default.createElement(
 					"div",
 					null,
-					_react2.default.createElement(_Navbar2.default, { bsStyle: "inverse" }),
+					_react2.default.createElement(_Navbar2.default, { style: styles.nav }),
 					_react2.default.createElement(
 						"div",
-						{ className: "Application row", style: styles.main },
-						(0, _react.cloneElement)(this.props.children)
+						{ className: "container-fluid" },
+						_react2.default.createElement(
+							"div",
+							{ className: "Application row", style: styles.main },
+							(0, _react.cloneElement)(this.props.children)
+						)
 					)
 				);
 			}
@@ -25558,13 +25544,22 @@
 
 	exports.default = (0, _radium2.default)(Application);
 
+	//
+
+
 	//Stylin'
 
 	var styles = {
+		nav: {
+			"z-index": "1000",
+			"opacity": "99"
+		},
+
 		main: {
-			"max-width": "1000px",
+			"max-width": "900px",
 			"align-items": "center",
-			"margin": "0 auto"
+			"margin": "0 auto",
+			"position": "relative"
 		}
 	};
 
@@ -48388,12 +48383,43 @@
 			value: function render() {
 
 				return _react2.default.createElement(
-					"div",
-					null,
+					_reactBootstrap.Navbar,
+					{ style: styles.nav },
 					_react2.default.createElement(
-						"h1",
-						{ style: styles.name },
-						"Nathaniel LaPier"
+						_reactBootstrap.Navbar.Header,
+						null,
+						_react2.default.createElement(
+							_reactBootstrap.Navbar.Brand,
+							null,
+							_react2.default.createElement(
+								"a",
+								{ href: "#", style: styles.name },
+								"Nathaniel LaPier"
+							)
+						)
+					),
+					_react2.default.createElement(
+						_reactBootstrap.Navbar.Collapse,
+						null,
+						_react2.default.createElement(
+							_reactBootstrap.Nav,
+							{ pullRight: true },
+							_react2.default.createElement(
+								_reactBootstrap.NavItem,
+								{ eventKey: 1, href: "#/" },
+								"About Me"
+							),
+							_react2.default.createElement(
+								_reactBootstrap.NavItem,
+								{ eventKey: 2, href: "#/Portfolio" },
+								"Portfolio"
+							),
+							_react2.default.createElement(
+								_reactBootstrap.NavItem,
+								{ eventKey: 3, href: "#/Contact" },
+								"Contact"
+							)
+						)
 					)
 				);
 			}
@@ -48406,27 +48432,43 @@
 
 
 	var styles = {
-		div: {
-			"max-width": "1000px"
+		nav: {
+			"background-color": "#FFFFFF",
+			"border": "none",
+			"border-bottom": "1px #CCCCCC solid",
+			"border-radius": "0px"
 		},
-
 		name: {
+			"font-size": "28pt"
+		}
+	};
+
+	/*
+
+	main:{
+			// "max-width": "1000px",
 			"background-color": "#FFFFFF",
 			"border-bottom": "1px #CCCCCC solid",
 			"margin-bottom": "15px",
 			"width": "100%",
 			"height": "80px",
 			"position": "fixed",
-			"top": "0",
-			"left": "0",
-			"right": "0",
-			"z-index": "1000",
-			// "text-align": "center",
-			"line-height": "80px"
-		}
-	};
+		    "top": "0",
+		    "left": "0",
+		    "display": "flex",
+		    "justify-content": "center"
+		    },
 
-	/*
+						<ul className="list-inline text-center">
+							<li style={styles.navigation}>About Me</li>
+							<li style={styles.navigation}>Portfolio</li>
+							<li style={styles.navigation}>Contact Me</li>	
+						</ul>
+
+
+
+
+
 
 					<span style={styles.name}>-Full stack JavaScript-based web development-</span>
 				<Navbar>
@@ -48502,7 +48544,6 @@
 					_react2.default.createElement(
 						"div",
 						{ className: "row" },
-						_react2.default.createElement("div", { className: "col-xs-1" }),
 						_react2.default.createElement("img", {
 							src: "/assets/images/Headshot2.jpg",
 							alt: "Nathaniel LaPier",
@@ -48513,8 +48554,7 @@
 							"p",
 							{ style: styles.p },
 							"Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I’m not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word \"y’all\" to NYC."
-						),
-						_react2.default.createElement("div", { className: "col-xs-1" })
+						)
 					),
 					_react2.default.createElement("br", null),
 					_react2.default.createElement("br", null),
@@ -48692,7 +48732,7 @@
 	var styles = {
 		title: {
 			"color": "#DFF0D8",
-			"margin-top": "130px",
+			"margin-top": "70px",
 			"margin-bottom": "4%",
 			"font-size": "70pt",
 			"font-style": "bold",
