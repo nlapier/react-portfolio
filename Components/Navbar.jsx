@@ -8,7 +8,10 @@ class Navigation extends Component {
 	render() {
 
 		return (
-			<h1>test</h1>
+			<div>
+				<h1 style={styles.name}>Nathaniel LaPier</h1>
+
+			</div>
 
 		);
 	}
@@ -17,14 +20,30 @@ class Navigation extends Component {
 export default Radium(Navigation);
 
 const styles ={
-	main: {
-		"border-top": "2px #CCCCCC solid",
-		"border-bottom": "2px #CCCCCC solid"
+	div:{
+		"max-width": "1000px"
+	},
+
+	name: {
+		"background-color": "#FFFFFF",
+		"border-bottom": "1px #CCCCCC solid",
+		"margin-bottom": "15px",
+		"width": "100%",
+		"height": "80px",
+		"position": "fixed",
+	    "top": "0",
+	    "left": "0",
+	    "right": "0",
+	    "z-index": "1000",
+	    // "text-align": "center",
+	    "line-height": "80px"
 	}
 }
 
 
 /*
+
+				<span style={styles.name}>-Full stack JavaScript-based web development-</span>
 			<Navbar>
 				<Navbar.Header>
 					<Navbar.Brand>

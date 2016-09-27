@@ -35,7 +35,9 @@ class Application extends Component {
 		return (
 
 			<div>
+
 				<Navbar bsStyle="inverse"/>
+
 
 				<div className="Application row" style={styles.main}>
 
@@ -58,7 +60,7 @@ export default Radium(Application);
 //Stylin'
 const styles ={
 	main: {
-		"max-width": "1100px",
+		"max-width": "1000px",
 		"align-items": "center",
 		"margin": "0 auto"
 	}

@@ -29,6 +29,7 @@ export default Radium(Titlebar);
 const styles = {
 	title: {
 		"color": "#DFF0D8",
+		"margin-top": "130px",
 		"margin-bottom": "4%",
 		"font-size": "70pt",
 		"font-style": "bold",
