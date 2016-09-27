@@ -8,20 +8,22 @@ class Navigation extends Component {
 	render() {
 
 		return (
-			<Navbar style={styles.nav}>
-				<Navbar.Header>
-					<Navbar.Brand>
-						<a href="#" style={styles.name}>Nathaniel LaPier</a>
-					</Navbar.Brand>
-				</Navbar.Header>
-			<Navbar.Collapse>
-				<Nav pullRight>
-					<NavItem eventKey={1} href="#/">About Me</NavItem>
-					<NavItem eventKey={2} href="#/Portfolio">Portfolio</NavItem>
-					<NavItem eventKey={3} href="#/Contact">Contact</NavItem>
-				</Nav>
-			</Navbar.Collapse>
-			</Navbar>
+			<div style={styles.main}>
+
+				<div style={styles.textDiv}>
+
+					<div style={styles.nameDiv}>
+						<span style={styles.name}>Nathaniel LaPier</span>
+					</div>
+
+					<div style={styles.navigationDiv}>
+						<span>test</span>
+					</div>
+
+				</div>
+
+			</div>
+
 		);
 	}
 }
@@ -29,21 +31,7 @@ class Navigation extends Component {
 export default Radium(Navigation);
 
 const styles ={
-	nav:{
-		"background-color": "#FFFFFF",
-		"border": "none",
-		"border-bottom": "1px #CCCCCC solid",
-		"border-radius": "0px"
-	},
-	name:{
-		"font-size": "28pt"
-	}
-}
-
-
-/*
-
-main:{
+	main:{
 		// "max-width": "1000px",
 		"background-color": "#FFFFFF",
 		"border-bottom": "1px #CCCCCC solid",
@@ -56,6 +44,37 @@ main:{
 	    "display": "flex",
 	    "justify-content": "center"
 	    },
+
+	textDiv:{
+		"display": "flex",
+		"justify-content": "space-between",
+		"width": "900px",
+	    "max-width": "900px",
+	    "display": "inline-block"
+	},
+
+	nameDiv:{
+		"display": "inline-block"
+	},
+
+	name: {
+		"font-size": "20pt",
+	    // "text-align": "center",
+	    "line-height": "80px"
+	},
+
+	navigationDiv:{
+		"display": "inline-block",
+		"align-items": "right"
+	},
+
+	navigation: {
+		// "display": "inline-block"
+	}
+}
+
+
+/*
 
 					<ul className="list-inline text-center">
 						<li style={styles.navigation}>About Me</li>

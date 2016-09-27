@@ -19,7 +19,7 @@ class Titlebar extends Component {
 				<div className="col-md-2"></div>
 
 			</div>
-	
+
 		);
 	}
 }
@@ -29,7 +29,7 @@ export default Radium(Titlebar);
 const styles = {
 	title: {
 		"color": "#DFF0D8",
-		"margin-top": "130px",
+		"margin-top": "70px",
 		"margin-bottom": "4%",
 		"font-size": "70pt",
 		"font-style": "bold",

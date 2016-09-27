@@ -11,24 +11,6 @@ import PortfolioApp from './Components/PortfolioApp';
 
 class Application extends Component {
 
-	/*
-	//I only need constructor if this app will have state.  
-	constructor(...args) {
-		super(...args);
-
-		// this.toggleCompleted = this.toggleCompleted.bind(this);
-
-		// this.addItem = this.addItem.bind(this);
-
-		// this.state = {
-		// 	items: [{
-		// 		id: 3,
-		// 		text: 'Laundry',
-		// 		isCompleted: true
-		// 	}]
-		// };	
-	}
-	*/
 
 	render() {
 
@@ -36,33 +18,43 @@ class Application extends Component {
 
 			<div>
 
-				<Navbar bsStyle="inverse"/>
+				<Navbar style={styles.nav}/>
 
+				<div className="container-fluid">
 
-				<div className="Application row" style={styles.main}>
+					<div className="Application row" style={styles.main}>
 
-				{
-					cloneElement(this.props.children
-					  //{prop: var}
-					  )
-				}
+						{
+							cloneElement(this.props.children)
+						}
 
+					</div>
 				</div>
 
 			</div>
-
 		)
 	}
 }
 
 export default Radium(Application);
 
+//
+
+
+
+
 //Stylin'
 const styles ={
+	nav: {
+		"z-index": "1000",
+		"opacity": "99"
+	},
+
 	main: {
-		"max-width": "1000px",
+		"max-width": "900px",
 		"align-items": "center",
-		"margin": "0 auto"
+		"margin": "0 auto",
+		"position": "relative"
 	}
 }
 
