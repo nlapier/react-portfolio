@@ -1,13 +1,30 @@
-
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from "react-bootstrap";
+import Radium from "radium";
+
   
 class Navigation extends Component {
 
 	render() {
-		//prop const here
 
 		return (
+			<h1>test</h1>
+
+		);
+	}
+}
+
+export default Radium(Navigation);
+
+const styles ={
+	main: {
+		"border-top": "2px #CCCCCC solid",
+		"border-bottom": "2px #CCCCCC solid"
+	}
+}
+
+
+/*
 			<Navbar>
 				<Navbar.Header>
 					<Navbar.Brand>
@@ -20,14 +37,6 @@ class Navigation extends Component {
 					<NavItem eventKey={3} href="#/Contact">Contact Me</NavItem>
 				</Nav>
 			</Navbar>
-		);
-	}
-}
-
-export default Navigation;
-
-/*
-
 
 
 */
