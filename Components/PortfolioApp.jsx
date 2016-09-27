@@ -6,7 +6,9 @@ class PortfolioApp extends Component {
 		//prop const here
 
 		return (
-			<div className="col-md-4">
+			<div>
+
+				0
 				
 			</div>
 		);

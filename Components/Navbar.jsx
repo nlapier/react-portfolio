@@ -1,13 +1,49 @@
-
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from "react-bootstrap";
+import Radium from "radium";
+
   
 class Navigation extends Component {
 
 	render() {
-		//prop const here
 
 		return (
+			<div>
+				<h1 style={styles.name}>Nathaniel LaPier</h1>
+
+			</div>
+
+		);
+	}
+}
+
+export default Radium(Navigation);
+
+const styles ={
+	div:{
+		"max-width": "1000px"
+	},
+
+	name: {
+		"background-color": "#FFFFFF",
+		"border-bottom": "1px #CCCCCC solid",
+		"margin-bottom": "15px",
+		"width": "100%",
+		"height": "80px",
+		"position": "fixed",
+	    "top": "0",
+	    "left": "0",
+	    "right": "0",
+	    "z-index": "1000",
+	    // "text-align": "center",
+	    "line-height": "80px"
+	}
+}
+
+
+/*
+
+				<span style={styles.name}>-Full stack JavaScript-based web development-</span>
 			<Navbar>
 				<Navbar.Header>
 					<Navbar.Brand>
@@ -20,14 +56,6 @@ class Navigation extends Component {
 					<NavItem eventKey={3} href="#/Contact">Contact Me</NavItem>
 				</Nav>
 			</Navbar>
-		);
-	}
-}
-
-export default Navigation;
-
-/*
-
 
 
 */
