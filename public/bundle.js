@@ -25547,9 +25547,7 @@
 					_react2.default.createElement(
 						"div",
 						{ className: "Application row", style: styles.main },
-						(0, _react.cloneElement)(this.props.children
-						//{prop: var}
-						)
+						(0, _react.cloneElement)(this.props.children)
 					)
 				);
 			}

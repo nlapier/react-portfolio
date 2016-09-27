@@ -38,19 +38,15 @@ class Application extends Component {
 
 				<Navbar bsStyle="inverse"/>
 
-
 				<div className="Application row" style={styles.main}>
 
 				{
-					cloneElement(this.props.children
-					  //{prop: var}
-					  )
+					cloneElement(this.props.children)
 				}
 
 				</div>
 
 			</div>
-
 		)
 	}
 }
