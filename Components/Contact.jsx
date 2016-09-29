@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import Bootstrap from "react-bootstrap";
+import Radium from "radium";
+import Titlebar from "./Titlebar";
 
 class Contact extends Component {
 
@@ -7,6 +10,7 @@ class Contact extends Component {
 
 		return (
 			<div>
+				<Titlebar title="Contact Me" />
 
 			
 			</div>
