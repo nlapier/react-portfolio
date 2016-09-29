@@ -5,12 +5,13 @@ import Radium from "radium";
 class PortfolioApp extends Component {
 
 	render() {
-		//prop const here
-
+		//Need: 
+			//{this.props.url}
+			//{this.props.text}
 		return (
 			<div>
 
-			<Image src="/assets/thumbnail.png" responsive />
+			<Image src={this.props.img} responsive />
 				
 			</div>
 		);

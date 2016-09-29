@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import Titlebar from "./Titlebar";
 import Bootstrap from "react-bootstrap";
 import Radium from "radium";
-
+import Titlebar from "./Titlebar";
+import Paragraph from "./Paragraph";
 
 class About extends Component {
-
 
 	render() {
 		//prop const here
@@ -25,9 +24,7 @@ class About extends Component {
 						style={styles.headshot}
 					/>
 
-					<p style={styles.p}>
-						Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I&#8217;m not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word &#34;y&#8217;all&#34; to NYC.
-					</p>
+					<Paragraph text={bioText} />
 
 				</div>
 
@@ -55,16 +52,9 @@ class About extends Component {
 	}
 }
 
-export default Radium(About);
+const bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
 
 const styles = {
-	title: {
-		color: "#DFF0D8",
-		"font-size": "70pt",
-		"font-style": "bold",
-		"border-top": "2px #CCCCCC solid",
-		"border-bottom": "2px #CCCCCC solid"
-	},
 	p:{
 		"font-size": "22pt"
 	},
@@ -83,6 +73,10 @@ const styles = {
 		"border": "1px #CCCCCC solid"
 	}
 }
+
+export default Radium(About);
+
+
 
 /*
 
