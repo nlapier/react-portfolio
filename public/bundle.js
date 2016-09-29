@@ -25442,7 +25442,7 @@
 
 	var _Portfolio2 = _interopRequireDefault(_Portfolio);
 
-	var _Contact = __webpack_require__(541);
+	var _Contact = __webpack_require__(542);
 
 	var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -48503,10 +48503,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Titlebar = __webpack_require__(539);
-
-	var _Titlebar2 = _interopRequireDefault(_Titlebar);
-
 	var _reactBootstrap = __webpack_require__(224);
 
 	var _reactBootstrap2 = _interopRequireDefault(_reactBootstrap);
@@ -48514,6 +48510,14 @@
 	var _radium = __webpack_require__(475);
 
 	var _radium2 = _interopRequireDefault(_radium);
+
+	var _Titlebar = __webpack_require__(539);
+
+	var _Titlebar2 = _interopRequireDefault(_Titlebar);
+
+	var _Paragraph = __webpack_require__(543);
+
+	var _Paragraph2 = _interopRequireDefault(_Paragraph);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -48550,11 +48554,7 @@
 							className: "img-square img-responsive",
 							style: styles.headshot
 						}),
-						_react2.default.createElement(
-							"p",
-							{ style: styles.p },
-							"Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I’m not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word \"y’all\" to NYC."
-						)
+						_react2.default.createElement(_Paragraph2.default, { text: bioText })
 					),
 					_react2.default.createElement("br", null),
 					_react2.default.createElement("br", null),
@@ -48614,17 +48614,9 @@
 		return About;
 	}(_react.Component);
 
-	exports.default = (0, _radium2.default)(About);
-
+	var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
 
 	var styles = {
-		title: {
-			color: "#DFF0D8",
-			"font-size": "70pt",
-			"font-style": "bold",
-			"border-top": "2px #CCCCCC solid",
-			"border-bottom": "2px #CCCCCC solid"
-		},
 		p: {
 			"font-size": "22pt"
 		},
@@ -48643,6 +48635,8 @@
 			"border": "1px #CCCCCC solid"
 		}
 	};
+
+	exports.default = (0, _radium2.default)(About);
 
 	/*
 
@@ -48765,7 +48759,7 @@
 /* 540 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -48776,6 +48770,22 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(224);
+
+	var _reactBootstrap2 = _interopRequireDefault(_reactBootstrap);
+
+	var _Titlebar = __webpack_require__(539);
+
+	var _Titlebar2 = _interopRequireDefault(_Titlebar);
+
+	var _PortfolioApp = __webpack_require__(541);
+
+	var _PortfolioApp2 = _interopRequireDefault(_PortfolioApp);
+
+	var _radium = __webpack_require__(475);
+
+	var _radium2 = _interopRequireDefault(_radium);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -48795,11 +48805,23 @@
 		}
 
 		_createClass(Portfolio, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
-				//prop const here
+				var apps = this.props.apps;
 
-				return _react2.default.createElement('div', null);
+
+				return _react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(_Titlebar2.default, { title: "My Portfolio" }),
+					apps.map(function (app) {
+						return _react2.default.createElement(_PortfolioApp2.default, {
+							img: app.img,
+							text: app.text,
+							url: app.url
+						});
+					})
+				);
 			}
 		}]);
 
@@ -48818,7 +48840,7 @@
 /* 541 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -48829,6 +48851,86 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(224);
+
+	var _radium = __webpack_require__(475);
+
+	var _radium2 = _interopRequireDefault(_radium);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PortfolioApp = function (_Component) {
+		_inherits(PortfolioApp, _Component);
+
+		function PortfolioApp() {
+			_classCallCheck(this, PortfolioApp);
+
+			return _possibleConstructorReturn(this, (PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).apply(this, arguments));
+		}
+
+		_createClass(PortfolioApp, [{
+			key: "render",
+			value: function render() {
+				//Need: 
+				//{this.props.url}
+				//{this.props.text}
+				return _react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(_reactBootstrap.Image, { src: this.props.img, responsive: true })
+				);
+			}
+		}]);
+
+		return PortfolioApp;
+	}(_react.Component);
+
+	exports.default = (0, _radium2.default)(PortfolioApp);
+
+	/*
+
+
+
+	*/
+
+/***/ },
+/* 542 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(224);
+
+	var _reactBootstrap2 = _interopRequireDefault(_reactBootstrap);
+
+	var _radium = __webpack_require__(475);
+
+	var _radium2 = _interopRequireDefault(_radium);
+
+	var _Titlebar = __webpack_require__(539);
+
+	var _Titlebar2 = _interopRequireDefault(_Titlebar);
+
+	var _Paragraph = __webpack_require__(543);
+
+	var _Paragraph2 = _interopRequireDefault(_Paragraph);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -48848,11 +48950,15 @@
 		}
 
 		_createClass(Contact, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
 				//prop const here
 
-				return _react2.default.createElement('div', null);
+				return _react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(_Titlebar2.default, { title: "Contact Me" })
+				);
 			}
 		}]);
 
@@ -48860,6 +48966,78 @@
 	}(_react.Component);
 
 	exports.default = Contact;
+
+	/*
+
+
+
+	*/
+
+/***/ },
+/* 543 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(224);
+
+	var _reactBootstrap2 = _interopRequireDefault(_reactBootstrap);
+
+	var _radium = __webpack_require__(475);
+
+	var _radium2 = _interopRequireDefault(_radium);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var About = function (_Component) {
+		_inherits(About, _Component);
+
+		function About() {
+			_classCallCheck(this, About);
+
+			return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+		}
+
+		_createClass(About, [{
+			key: "render",
+			value: function render() {
+
+				return _react2.default.createElement(
+					"p",
+					{ style: styles.p },
+					this.props.text
+				);
+			}
+		}]);
+
+		return About;
+	}(_react.Component);
+
+	exports.default = (0, _radium2.default)(About);
+
+
+	var styles = {
+		p: {
+			"font-size": "22pt",
+			"text-justify": "distribute"
+		}
+	};
 
 	/*
 
