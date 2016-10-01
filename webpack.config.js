@@ -38,7 +38,7 @@ module.exports = {
   }
 
 }
-
+//webpack: extract text plugin
 /*
       { 
         test: /\.(png|jpg|jpeg|gif|woff)$/, 
