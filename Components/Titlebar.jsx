@@ -14,7 +14,7 @@ class Titlebar extends Component {
 
 				<div className="col-md-2"></div>
 
-				<h1 className="text-center col-xs-12 col-md-8"  style={styles.title}>{this.props.title}</h1>
+					<h1 className="text-center col-xs-12 col-md-8"  style={styles.title}>{this.props.title}</h1>
 
 				<div className="col-md-2"></div>
 
