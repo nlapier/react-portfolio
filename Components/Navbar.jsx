@@ -13,6 +13,7 @@ class Navigation extends Component {
 					<Navbar.Brand>
 						<a href="#" style={styles.name}>Nathaniel LaPier</a>
 					</Navbar.Brand>
+					<Navbar.Toggle />
 				</Navbar.Header>
 				<Navbar.Collapse>
 					<Nav pullRight>
