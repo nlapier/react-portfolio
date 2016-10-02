@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {Grid, Row, Col} from "react-bootstrap";
-import Radium from "radium";
 import styles from "./Titlebar.css";
 
 
@@ -23,7 +22,7 @@ class Titlebar extends Component {
 	}
 }
 
-export default Radium(Titlebar);
+export default Titlebar;
 
 // const styles = {
 // 	title: {

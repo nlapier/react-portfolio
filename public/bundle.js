@@ -25486,13 +25486,13 @@
 
 	var _reactBootstrap = __webpack_require__(224);
 
-	var _radium = __webpack_require__(475);
-
-	var _radium2 = _interopRequireDefault(_radium);
-
 	var _Navbar = __webpack_require__(537);
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
+
+	var _Application = __webpack_require__(548);
+
+	var _Application2 = _interopRequireDefault(_Application);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25501,11 +25501,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	/*
-	//Component for each individual app
-	import PortfolioApp from './Components/PortfolioApp';
-	*/
 
 	var Application = function (_Component) {
 		_inherits(Application, _Component);
@@ -25523,13 +25518,13 @@
 				return _react2.default.createElement(
 					"div",
 					null,
-					_react2.default.createElement(_Navbar2.default, { style: styles.nav }),
+					_react2.default.createElement(_Navbar2.default, null),
 					_react2.default.createElement(
 						_reactBootstrap.Grid,
 						null,
 						_react2.default.createElement(
 							"div",
-							{ className: "Application show-grid", style: styles.main },
+							{ id: "Application", className: _Application2.default.Application_main },
 							(0, _react.cloneElement)(this.props.children)
 						)
 					)
@@ -25540,26 +25535,7 @@
 		return Application;
 	}(_react.Component);
 
-	exports.default = (0, _radium2.default)(Application);
-
-	//
-
-
-	//Stylin'
-
-	var styles = {
-		nav: {
-			"z-index": "1000",
-			"opacity": "99"
-		},
-
-		main: {
-			"max-width": "900px",
-			"align-items": "center",
-			"margin": "0 auto",
-			"position": "relative"
-		}
-	};
+	exports.default = Application;
 
 /***/ },
 /* 224 */
@@ -48672,10 +48648,6 @@
 
 	var _reactBootstrap = __webpack_require__(224);
 
-	var _radium = __webpack_require__(475);
-
-	var _radium2 = _interopRequireDefault(_radium);
-
 	var _Titlebar = __webpack_require__(540);
 
 	var _Titlebar2 = _interopRequireDefault(_Titlebar);
@@ -48722,7 +48694,7 @@
 		return Titlebar;
 	}(_react.Component);
 
-	exports.default = (0, _radium2.default)(Titlebar);
+	exports.default = Titlebar;
 
 	// const styles = {
 	// 	title: {
@@ -49397,6 +49369,48 @@
 
 
 	*/
+
+/***/ },
+/* 548 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(549);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(543)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js?{\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\"}!./Application.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js?{\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\"}!./Application.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 549 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(542)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".Application__Application_main___kDJ6Y: {\n\t\tmax-width: 900px;\n\t\talign-items: center;\n\t\tmargin: 0 auto;\n\t\tposition: relative\n\t}", ""]);
+
+	// exports
+	exports.locals = {
+		"Application_main": "Application__Application_main___kDJ6Y"
+	};
 
 /***/ }
 /******/ ]);

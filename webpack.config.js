@@ -46,15 +46,3 @@ module.exports = {
   }
 
 }
-//webpack: extract text plugin
-/*
-      { 
-        test: /\.(png|jpg|jpeg|gif|woff)$/, 
-        loader: 'url-loader?limit=25000' 
-      },
-      { 
-        test: /\.(png|jpg|jpeg|gif|woff)$/, 
-        loader: 'file-loader' 
-      }
-
-*/
