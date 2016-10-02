@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Bootstrap from "react-bootstrap";
-import Radium from "radium";
+import {Grid, Row, Col} from "react-bootstrap";
+import styles from "./Titlebar.css";
 
 
 class Titlebar extends Component {
@@ -9,36 +9,36 @@ class Titlebar extends Component {
 	render() {
 
 		return (
+			<Row className="show-grid">
+				<Col xsHidden md={2}></Col>
 
-			<div className="row">
+				<Col xs={12} md={8}>
+					<h1 className={styles.Titlebar_title}>{this.props.title}</h1>
+				</Col>
 
-				<div className="col-md-2"></div>
-
-					<h1 className="text-center col-xs-12 col-md-8"  style={styles.title}>{this.props.title}</h1>
-
-				<div className="col-md-2"></div>
-
-			</div>
-
+				<Col xsHidden md={2}></Col>
+			</Row>
 		);
 	}
 }
 
-export default Radium(Titlebar);
+export default Titlebar;
 
-const styles = {
-	title: {
-		"color": "#DFF0D8",
-		"margin-top": "70px",
-		"margin-bottom": "4%",
-		"font-size": "70pt",
-		"font-style": "bold",
-		"border-top": "2px #CCCCCC solid",
-		"border-bottom": "2px #CCCCCC solid"
-	}
-}
+// const styles = {
+// 	title: {
+// 		"color": "#DFF0D8",
+// 		"margin-top": "70px",
+// 		"margin-bottom": "4%",
+// 		"font-size": "70pt",
+// 		"font-style": "bold",
+// 		"border-top": "2px #CCCCCC solid",
+// 		"border-bottom": "2px #CCCCCC solid"
+// 	}
+// }
 
 /*
+"text-center col-xs-12 col-md-8"
+
 
 <img src="https://avatars2.githubusercontent.com/u/17186793?v=3&s=400" alt="Nathaniel LaPier" className="img-circle img-responsive col-md-4" />
 

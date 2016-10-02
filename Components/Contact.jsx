@@ -14,6 +14,7 @@ class Contact extends Component {
 			<div>
 				<Titlebar title="Contact Me" />
 
+
 			</div>
 		);
 	}

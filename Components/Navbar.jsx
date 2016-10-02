@@ -13,14 +13,15 @@ class Navigation extends Component {
 					<Navbar.Brand>
 						<a href="#" style={styles.name}>Nathaniel LaPier</a>
 					</Navbar.Brand>
+					<Navbar.Toggle />
 				</Navbar.Header>
-			<Navbar.Collapse>
-				<Nav pullRight>
-					<NavItem eventKey={1} href="#/">About Me</NavItem>
-					<NavItem eventKey={2} href="#/Portfolio">Portfolio</NavItem>
-					<NavItem eventKey={3} href="#/Contact">Contact</NavItem>
-				</Nav>
-			</Navbar.Collapse>
+				<Navbar.Collapse>
+					<Nav pullRight>
+						<NavItem eventKey={1} href="#/">About Me</NavItem>
+						<NavItem eventKey={2} href="#/Portfolio">Portfolio</NavItem>
+						<NavItem eventKey={3} href="#/Contact">Contact</NavItem>
+					</Nav>
+				</Navbar.Collapse>
 			</Navbar>
 		);
 	}

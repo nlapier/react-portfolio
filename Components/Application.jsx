@@ -1,12 +1,7 @@
 import React, { Component, cloneElement } from 'react';
-import Bootstrap from "react-bootstrap";
-import Radium from "radium";
+import {Grid, Row, Col} from "react-bootstrap";
 import Navbar from "./Navbar";
- 
-/*
-//Component for each individual app
-import PortfolioApp from './Components/PortfolioApp';
-*/
+import styles from "./Application.css";
 
 
 class Application extends Component {
@@ -18,45 +13,27 @@ class Application extends Component {
 
 			<div>
 
-				<Navbar style={styles.nav}/>
+				<Navbar/>
 
-				<div className="container-fluid">
+				<Grid>
 
-					<div className="Application row" style={styles.main}>
+					<div id="Application" className={styles.Application_main}>
 
 						{
 							cloneElement(this.props.children)
 						}
 
 					</div>
-				</div>
+				</Grid>
 
 			</div>
 		)
 	}
 }
 
-export default Radium(Application);
-
-//
+export default Application;
 
 
-
-
-//Stylin'
-const styles ={
-	nav: {
-		"z-index": "1000",
-		"opacity": "99"
-	},
-
-	main: {
-		"max-width": "900px",
-		"align-items": "center",
-		"margin": "0 auto",
-		"position": "relative"
-	}
-}
 
 
 
