@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Bootstrap from "react-bootstrap";
+import {Grid, Row, Col} from "react-bootstrap";
 import Radium from "radium";
 import Titlebar from "./Titlebar";
 import Paragraph from "./Paragraph";
@@ -11,11 +11,11 @@ class About extends Component {
 
 		return (
 
-			<div className="col-xs-12">
+			<div>
 
 				<Titlebar title="About Me" />
 
-				<div className="row">
+				<Row className="show-grid">
 
 					<img 
 						src={"/assets/images/Headshot2.jpg"} 
@@ -26,13 +26,13 @@ class About extends Component {
 
 					<Paragraph text={bioText} />
 
-				</div>
+				</Row>
 
 				<br />
 				<br />
 				<br />
 
-				<div className="row text-center" style={styles.p}>
+				<Row className="text-center" style={styles.p}>
 					<p>
 						In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:
 					</p>
@@ -46,7 +46,7 @@ class About extends Component {
 						<li style={[styles.skills, styles.skillsborder]}>MongoDB</li>
 						<li style={[styles.skills, styles.skillsborder]}>React.js</li>
 					</ul>
-				</div>
+				</Row>
 			</div>
 		);
 	}

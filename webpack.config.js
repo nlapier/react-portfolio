@@ -21,7 +21,15 @@ module.exports = {
       },
       { 
         test: /\.css$/, 
-        loader: 'style-loader!css-loader' 
+        loader: 'style-loader' 
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        query: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]'
+        },
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,

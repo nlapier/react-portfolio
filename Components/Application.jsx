@@ -1,5 +1,5 @@
 import React, { Component, cloneElement } from 'react';
-import Bootstrap from "react-bootstrap";
+import {Grid, Row, Col} from "react-bootstrap";
 import Radium from "radium";
 import Navbar from "./Navbar";
  
@@ -20,16 +20,16 @@ class Application extends Component {
 
 				<Navbar style={styles.nav}/>
 
-				<div className="container-fluid">
+				<Grid>
 
-					<div className="Application row" style={styles.main}>
+					<div className="Application show-grid" style={styles.main}>
 
 						{
 							cloneElement(this.props.children)
 						}
 
 					</div>
-				</div>
+				</Grid>
 
 			</div>
 		)
