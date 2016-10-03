@@ -25456,11 +25456,15 @@
 	//Base component, including nav bar
 	//===React Dependencies===
 	exports.default = _react2.default.createElement(
-		_reactRouter.Route,
-		{ component: _Application2.default },
-		_react2.default.createElement(_reactRouter.Route, { path: '/', component: _About2.default }),
-		_react2.default.createElement(_reactRouter.Route, { path: 'Portfolio', component: _Portfolio2.default }),
-		_react2.default.createElement(_reactRouter.Route, { path: 'Contact', component: _Contact2.default })
+		_reactRouter.Router,
+		{ history: _reactRouter.hashHistory },
+		_react2.default.createElement(
+			_reactRouter.Route,
+			{ component: _Application2.default },
+			_react2.default.createElement(_reactRouter.Route, { path: '/', component: _About2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'Portfolio', component: _Portfolio2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'Contact', component: _Contact2.default })
+		)
 	);
 
 	//Contact page
