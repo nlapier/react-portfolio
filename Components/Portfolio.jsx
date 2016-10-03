@@ -7,7 +7,6 @@ import Radium from "radium";
 class Portfolio extends Component {
 
 	render() {
-		const {apps} = this.props;
 
 		return (
 
@@ -27,6 +26,33 @@ class Portfolio extends Component {
 		);
 	}
 }
+
+// function App (title, text, img, url){
+// 	this.title = title,
+// 	this.text = text,
+// 	this.img = img,
+// 	this.url = url
+// }
+
+
+
+const apps = [
+	{
+		title: "GIF-Explosion",
+		text: "A 90s-tastic jQuery-powered experience.",
+		img: "/assets/images/prince.png",
+		url: "https://nlp-gif-explosion.herokuapp.com/"
+	},
+	{
+		title: "Fresh Hangman",
+		text: "A first-time attempt at retrieving data from a web API.",
+		img: "/assets/images/gif.png",
+		url: "https://nlp-fresh-hangman.herokuapp.com/"
+	}
+];
+
+
+
 
 export default Portfolio;
 

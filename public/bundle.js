@@ -25442,7 +25442,7 @@
 
 	var _Portfolio2 = _interopRequireDefault(_Portfolio);
 
-	var _Contact = __webpack_require__(548);
+	var _Contact = __webpack_require__(547);
 
 	var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -49172,7 +49172,7 @@
 
 	var _Titlebar2 = _interopRequireDefault(_Titlebar);
 
-	var _PortfolioApp = __webpack_require__(547);
+	var _PortfolioApp = __webpack_require__(548);
 
 	var _PortfolioApp2 = _interopRequireDefault(_PortfolioApp);
 
@@ -49200,8 +49200,6 @@
 		_createClass(Portfolio, [{
 			key: "render",
 			value: function render() {
-				var apps = this.props.apps;
-
 
 				return _react2.default.createElement(
 					"div",
@@ -49221,6 +49219,26 @@
 		return Portfolio;
 	}(_react.Component);
 
+	// function App (title, text, img, url){
+	// 	this.title = title,
+	// 	this.text = text,
+	// 	this.img = img,
+	// 	this.url = url
+	// }
+
+
+	var apps = [{
+		title: "GIF-Explosion",
+		text: "A 90s-tastic jQuery-powered experience.",
+		img: "/assets/images/prince.png",
+		url: "https://nlp-gif-explosion.herokuapp.com/"
+	}, {
+		title: "Fresh Hangman",
+		text: "A first-time attempt at retrieving data from a web API.",
+		img: "/assets/images/gif.png",
+		url: "https://nlp-fresh-hangman.herokuapp.com/"
+	}];
+
 	exports.default = Portfolio;
 
 	/*
@@ -49231,70 +49249,6 @@
 
 /***/ },
 /* 547 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactBootstrap = __webpack_require__(224);
-
-	var _radium = __webpack_require__(475);
-
-	var _radium2 = _interopRequireDefault(_radium);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var PortfolioApp = function (_Component) {
-		_inherits(PortfolioApp, _Component);
-
-		function PortfolioApp() {
-			_classCallCheck(this, PortfolioApp);
-
-			return _possibleConstructorReturn(this, (PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).apply(this, arguments));
-		}
-
-		_createClass(PortfolioApp, [{
-			key: "render",
-			value: function render() {
-				//Need: 
-				//{this.props.url}
-				//{this.props.text}
-				return _react2.default.createElement(
-					"div",
-					null,
-					_react2.default.createElement(_reactBootstrap.Image, { src: this.props.img, responsive: true })
-				);
-			}
-		}]);
-
-		return PortfolioApp;
-	}(_react.Component);
-
-	exports.default = (0, _radium2.default)(PortfolioApp);
-
-	/*
-
-
-
-	*/
-
-/***/ },
-/* 548 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -49362,6 +49316,73 @@
 
 	/*
 
+
+
+	*/
+
+/***/ },
+/* 548 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(224);
+
+	var _radium = __webpack_require__(475);
+
+	var _radium2 = _interopRequireDefault(_radium);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PortfolioApp = function (_Component) {
+		_inherits(PortfolioApp, _Component);
+
+		function PortfolioApp() {
+			_classCallCheck(this, PortfolioApp);
+
+			return _possibleConstructorReturn(this, (PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).apply(this, arguments));
+		}
+
+		_createClass(PortfolioApp, [{
+			key: "render",
+			value: function render() {
+
+				return _react2.default.createElement(
+					"div",
+					{ onClick: this.handleClick },
+					_react2.default.createElement(_reactBootstrap.Image, { src: this.props.img, responsive: true })
+				);
+			}
+		}]);
+
+		return PortfolioApp;
+	}(_react.Component);
+
+	exports.default = (0, _radium2.default)(PortfolioApp);
+
+	/*
+		{
+			title: "GIF-Explosion",
+			text: "A 90s-tastic jQuery-powered experience.",
+			img: "/assets/images/prince.png",
+			url: "https://nlp-gif-explosion.herokuapp.com/"
+		},
 
 
 	*/

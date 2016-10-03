@@ -5,13 +5,11 @@ import Radium from "radium";
 class PortfolioApp extends Component {
 
 	render() {
-		//Need: 
-			//{this.props.url}
-			//{this.props.text}
-		return (
-			<div>
 
-			<Image src={this.props.img} responsive />
+		return (
+			<div onClick={this.handleClick}>
+
+				<Image src={this.props.img} responsive />
 				
 			</div>
 		);
@@ -20,8 +18,15 @@ class PortfolioApp extends Component {
 
 export default Radium(PortfolioApp);
 
-/*
 
+
+/*
+	{
+		title: "GIF-Explosion",
+		text: "A 90s-tastic jQuery-powered experience.",
+		img: "/assets/images/prince.png",
+		url: "https://nlp-gif-explosion.herokuapp.com/"
+	},
 
 
 */

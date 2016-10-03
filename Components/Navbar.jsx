@@ -15,6 +15,7 @@ class Navigation extends Component {
 					</Navbar.Brand>
 					<Navbar.Toggle />
 				</Navbar.Header>
+				
 				<Navbar.Collapse>
 					<Nav pullRight>
 						<NavItem eventKey={1} href="#/">About Me</NavItem>
