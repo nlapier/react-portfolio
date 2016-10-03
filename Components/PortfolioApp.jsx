@@ -7,12 +7,29 @@ class PortfolioApp extends Component {
 	render() {
 
 		return (
-			<a href={this.props.url} target="_blank">
-				<div>
-					<Image src={this.props.img} responsive />
-				</div>
-			</a>
+			<div style={styles.div}>
+				<a href={this.props.url} target="_blank">
+					<Image src={this.props.img} style={styles.img} responsive/>
+				</a>
+			</div>
 		);
+	}
+}
+
+const styles ={
+	div:{
+		"width": "60%",
+		"margin": "0 auto",
+		"margin-top": "3%",
+		"margin-bottom": "3%"
+
+	},
+	img: {
+		// "border": "2px #CCCCCC solid",
+		"padding": "1%",
+		"margin": "auto",
+		"width": "100%",
+		"border": "2px #CCCCCC solid"
 	}
 }
 

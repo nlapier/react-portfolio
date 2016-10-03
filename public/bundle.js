@@ -49368,12 +49368,12 @@
 			value: function render() {
 
 				return _react2.default.createElement(
-					"a",
-					{ href: this.props.url, target: "_blank" },
+					"div",
+					{ style: styles.div },
 					_react2.default.createElement(
-						"div",
-						null,
-						_react2.default.createElement(_reactBootstrap.Image, { src: this.props.img, responsive: true })
+						"a",
+						{ href: this.props.url, target: "_blank" },
+						_react2.default.createElement(_reactBootstrap.Image, { src: this.props.img, style: styles.img, responsive: true })
 					)
 				);
 			}
@@ -49381,6 +49381,23 @@
 
 		return PortfolioApp;
 	}(_react.Component);
+
+	var styles = {
+		div: {
+			"width": "60%",
+			"margin": "0 auto",
+			"margin-top": "3%",
+			"margin-bottom": "3%"
+
+		},
+		img: {
+			// "border": "2px #CCCCCC solid",
+			"padding": "1%",
+			"margin": "auto",
+			"width": "100%",
+			"border": "2px #CCCCCC solid"
+		}
+	};
 
 	exports.default = (0, _radium2.default)(PortfolioApp);
 
