@@ -38,21 +38,18 @@ class Portfolio extends Component {
 
 const apps = [
 	{
-		title: "GIF-Explosion",
+		title: "Fresh Hangman",
 		text: "A 90s-tastic jQuery-powered experience.",
 		img: "/assets/images/prince.png",
-		url: "https://nlp-gif-explosion.herokuapp.com/"
+		url: "https://nlp-fresh-hangman.herokuapp.com/"
 	},
 	{
-		title: "Fresh Hangman",
+		title: "GIF-Explosion",
 		text: "A first-time attempt at retrieving data from a web API.",
 		img: "/assets/images/gif.png",
-		url: "https://nlp-fresh-hangman.herokuapp.com/"
+		url: "https://nlp-gif-explosion.herokuapp.com/"
 	}
 ];
-
-
-
 
 export default Portfolio;
 

@@ -7,11 +7,11 @@ class PortfolioApp extends Component {
 	render() {
 
 		return (
-			<div onClick={this.handleClick}>
-
-				<Image src={this.props.img} responsive />
-				
-			</div>
+			<a href={this.props.url} target="_blank">
+				<div>
+					<Image src={this.props.img} responsive />
+				</div>
+			</a>
 		);
 	}
 }

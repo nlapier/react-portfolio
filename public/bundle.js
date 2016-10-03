@@ -49073,7 +49073,7 @@
 
 
 	// module
-	exports.push([module.id, "\t.Titlebar__Titlebar_title___GbgAv {\n\t\ttext-align: center;\n\t\tcolor: #DFF0D8;\n\t\tmargin-top: 70px;\n\t\tmargin-bottom: 4%;\n\t\tfont-size: 70pt;\n\t\tfont-style: bold;\n\t\tborder-top: 2px #CCCCCC solid;\n\t\tborder-bottom: 2px #CCCCCC solid;\n\t}\n\n\n\n\t", ""]);
+	exports.push([module.id, "\t.Titlebar__Titlebar_title___GbgAv {\n\t\ttext-align: center;\n\t\tcolor: #DFF0D8;\n\t\tmargin-top: 70px;\n\t\tmargin-bottom: 4%;\n\t\tfont-size: 70pt;\n\t\tfont-style: bold;\n\t\tborder-top: 2px #CCCCCC solid;\n\t\tborder-bottom: 2px #CCCCCC solid;\n\t\tpadding-bottom: 10px;\n\t}\n\n\n\n\t", ""]);
 
 	// exports
 	exports.locals = {
@@ -49232,15 +49232,15 @@
 
 
 	var apps = [{
-		title: "GIF-Explosion",
+		title: "Fresh Hangman",
 		text: "A 90s-tastic jQuery-powered experience.",
 		img: "/assets/images/prince.png",
-		url: "https://nlp-gif-explosion.herokuapp.com/"
+		url: "https://nlp-fresh-hangman.herokuapp.com/"
 	}, {
-		title: "Fresh Hangman",
+		title: "GIF-Explosion",
 		text: "A first-time attempt at retrieving data from a web API.",
 		img: "/assets/images/gif.png",
-		url: "https://nlp-fresh-hangman.herokuapp.com/"
+		url: "https://nlp-gif-explosion.herokuapp.com/"
 	}];
 
 	exports.default = Portfolio;
@@ -49368,9 +49368,13 @@
 			value: function render() {
 
 				return _react2.default.createElement(
-					"div",
-					{ onClick: this.handleClick },
-					_react2.default.createElement(_reactBootstrap.Image, { src: this.props.img, responsive: true })
+					"a",
+					{ href: this.props.url, target: "_blank" },
+					_react2.default.createElement(
+						"div",
+						null,
+						_react2.default.createElement(_reactBootstrap.Image, { src: this.props.img, responsive: true })
+					)
 				);
 			}
 		}]);
