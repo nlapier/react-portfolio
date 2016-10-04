@@ -49211,8 +49211,9 @@
 					_react2.default.createElement(_Titlebar2.default, { title: "My Portfolio" }),
 					apps.map(function (app) {
 						return _react2.default.createElement(_PortfolioApp2.default, {
-							img: app.img,
+							title: app.title,
 							text: app.text,
+							img: app.img,
 							url: app.url
 						});
 					})
@@ -49328,7 +49329,7 @@
 /* 548 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -49339,6 +49340,10 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(158);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
 
 	var _reactBootstrap = __webpack_require__(224);
 
@@ -49357,47 +49362,58 @@
 	var PortfolioApp = function (_Component) {
 		_inherits(PortfolioApp, _Component);
 
-		function PortfolioApp() {
-			var _ref;
-
+		function PortfolioApp(props) {
 			_classCallCheck(this, PortfolioApp);
 
-			for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-				args[_key] = arguments[_key];
-			}
-
-			var _this = _possibleConstructorReturn(this, (_ref = PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).call.apply(_ref, [this].concat(args)));
+			var _this = _possibleConstructorReturn(this, (PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).call(this, props));
 
 			_this.state = {
 				show: false
 			};
+			_this.mouseIn = _this.mouseIn.bind(_this);
+			_this.mouseOut = _this.mouseOut.bind(_this);
 			return _this;
 		}
 
 		_createClass(PortfolioApp, [{
-			key: "onMouseEnter",
-			value: function onMouseEnter(e) {
+			key: 'mouseIn',
+			value: function mouseIn(e) {
 				this.state.show = true;
-				console.log("state: ", state);
+				console.log("enter state: ", this.state.show);
 			}
 		}, {
-			key: "onMouseLeave",
-			value: function onMouseLeave(e) {
+			key: 'mouseOut',
+			value: function mouseOut(e) {
 				this.state.show = false;
-				console.log("state: ", state);
+				console.log("leave state: ", this.state.show);
 			}
 		}, {
-			key: "render",
+			key: 'render',
 			value: function render() {
+				var _this2 = this;
+
+				var _props = this.props;
+				var url = _props.url;
+				var img = _props.img;
+				var title = _props.title;
+				var text = _props.text;
+				var show = this.state.show;
+
+
+				console.log("show: ", this.state.show);
 
 				return _react2.default.createElement(
-					"div",
-					{ style: styles.div },
+					'div',
+					{
+						style: styles.div,
+						onMouseEnter: this.mouseIn,
+						onMouseLeave: this.mouseOut
+					},
 					_react2.default.createElement(
-						"a",
-						{ href: this.props.url, target: "_blank" },
+						'a',
+						{ href: url, target: '_blank' },
 						_react2.default.createElement(_reactBootstrap.Image, {
-							src: this.props.img,
+							src: img,
 							style: styles.img,
 							responsive: true
 						})
@@ -49405,12 +49421,14 @@
 					_react2.default.createElement(
 						_reactBootstrap.Overlay,
 						{
-							show: this.state.show,
-							placement: "center",
-							animation: "true",
-							container: this
+							show: show,
+							animation: 'true',
+							container: this,
+							target: function target() {
+								return _reactDom2.default.findDOMNode(_this2.refs.target);
+							}
 						},
-						_react2.default.createElement(_AppPopover2.default, { title: this.props.title, text: this.props.text })
+						_react2.default.createElement(_AppPopover2.default, { title: title, text: text })
 					)
 				);
 			}
@@ -49442,6 +49460,10 @@
 	exports.default = PortfolioApp;
 
 	/*
+
+						
+
+
 		{
 			title: "GIF-Explosion",
 			text: "A 90s-tastic jQuery-powered experience.",
