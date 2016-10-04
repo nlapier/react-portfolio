@@ -49303,13 +49303,13 @@
 			key: "render",
 			value: function render() {
 				var contacts = [{
-					img: "/assets/images/github.png",
-					url: "https://github.com/nlapier",
-					text: "Github"
-				}, {
 					img: "/assets/images/linkedin.png",
 					url: "https://www.linkedin.com/in/nathaniel-lapier-6637244a",
 					text: "LinkedIn"
+				}, {
+					img: "/assets/images/github.png",
+					url: "https://github.com/nlapier",
+					text: "Github"
 				}, {
 					img: "/assets/images/email.png",
 					url: "#",
@@ -49320,19 +49320,30 @@
 					"div",
 					null,
 					_react2.default.createElement(_Titlebar2.default, { title: "Contact Me" }),
+					_react2.default.createElement("br", null),
 					_react2.default.createElement(
 						_reactBootstrap.Grid,
 						null,
 						_react2.default.createElement(
 							_reactBootstrap.Row,
 							null,
-							contacts.map(function (contact) {
-								return _react2.default.createElement(_ContactIcon2.default, {
-									img: contact.img,
-									url: contact.url,
-									text: contact.text
-								});
-							})
+							_react2.default.createElement(_reactBootstrap.Col, { sm: 2 }),
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ sm: 8 },
+								_react2.default.createElement(
+									_reactBootstrap.Row,
+									null,
+									contacts.map(function (contact) {
+										return _react2.default.createElement(_ContactIcon2.default, {
+											img: contact.img,
+											url: contact.url,
+											text: contact.text
+										});
+									})
+								)
+							),
+							_react2.default.createElement(_reactBootstrap.Col, { sm: 2 })
 						)
 					)
 				);
@@ -49597,13 +49608,20 @@
 		_createClass(ContactIcon, [{
 			key: "render",
 			value: function render() {
-				_react2.default.createElement(
+
+				return _react2.default.createElement(
 					"div",
 					null,
 					_react2.default.createElement(
 						_reactBootstrap.Col,
-						{ cs: 12, sm: 4 },
-						_react2.default.createElement(Thumbnail, { href: this.props.url, alt: this.props.text, src: this.props.img })
+						{ sm: 4 },
+						_react2.default.createElement(_reactBootstrap.Thumbnail, {
+							href: this.props.url,
+							alt: this.props.text,
+							src: this.props.img,
+							target: "_blank",
+							style: styles.thumb
+						})
 					)
 				);
 			}
@@ -49612,7 +49630,21 @@
 		return ContactIcon;
 	}(_react.Component);
 
+	var styles = {
+		thumb: {
+			backgroundColor: "transparent",
+			border: "0px",
+			width: "60%",
+			margin: "auto"
+		}
+
+	};
+
 	exports.default = ContactIcon;
+
+	/*
+
+	*/
 
 /***/ }
 /******/ ]);
