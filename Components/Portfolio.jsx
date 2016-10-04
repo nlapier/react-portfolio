@@ -16,8 +16,9 @@ class Portfolio extends Component {
 
 				{apps.map((app) => 
 					<PortfolioApp
+						title={app.title}
+						text={app.text}					
 						img={app.img}
-						text={app.text}
 						url={app.url}
 					/>
 				)}
