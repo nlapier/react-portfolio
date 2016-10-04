@@ -1,7 +1,7 @@
 //===React Dependencies===
 import React from 'react';
 
-import { Route } from 'react-router';
+import { Route, Router, hashHistory } from 'react-router';
 
 //===Import Components===
 
@@ -18,9 +18,11 @@ import Portfolio from './Components/Portfolio';
 import Contact from './Components/Contact';
 
 export default (
-	<Route component={Application}>
-		<Route path="/" component={About} />
-		<Route path="Portfolio" component={Portfolio} />
-		<Route path="Contact" component={Contact} />
-	</Route>
+	<Router history={hashHistory}>
+		<Route component={Application}>
+			<Route path="/" component={About} />
+			<Route path="Portfolio" component={Portfolio} />
+			<Route path="Contact" component={Contact} />
+		</Route>
+	</Router>
 );

@@ -18,7 +18,7 @@ class About extends Component {
 				<Row className="show-grid">
 
 					<img 
-						src={"/assets/images/Headshot2.jpg"} 
+						src="/assets/images/Headshot2.jpg" 
 						alt="Nathaniel LaPier" 
 						className="img-square img-responsive" 
 						style={styles.headshot}
