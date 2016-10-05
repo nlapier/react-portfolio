@@ -49270,15 +49270,13 @@
 
 	var _reactBootstrap = __webpack_require__(224);
 
-	var _reactBootstrap2 = _interopRequireDefault(_reactBootstrap);
-
-	var _radium = __webpack_require__(475);
-
-	var _radium2 = _interopRequireDefault(_radium);
-
 	var _Titlebar = __webpack_require__(542);
 
 	var _Titlebar2 = _interopRequireDefault(_Titlebar);
+
+	var _ContactIcon = __webpack_require__(551);
+
+	var _ContactIcon2 = _interopRequireDefault(_ContactIcon);
 
 	var _Paragraph = __webpack_require__(545);
 
@@ -49304,12 +49302,50 @@
 		_createClass(Contact, [{
 			key: "render",
 			value: function render() {
-				//prop const here
+				var contacts = [{
+					img: "/assets/images/linkedin.png",
+					url: "https://www.linkedin.com/in/nathaniel-lapier-6637244a",
+					text: "LinkedIn"
+				}, {
+					img: "/assets/images/github.png",
+					url: "https://github.com/nlapier",
+					text: "Github"
+				}, {
+					img: "/assets/images/email.png",
+					url: "#",
+					text: "Email"
+				}];
 
 				return _react2.default.createElement(
 					"div",
 					null,
-					_react2.default.createElement(_Titlebar2.default, { title: "Contact Me" })
+					_react2.default.createElement(_Titlebar2.default, { title: "Contact Me" }),
+					_react2.default.createElement("br", null),
+					_react2.default.createElement(
+						_reactBootstrap.Grid,
+						null,
+						_react2.default.createElement(
+							_reactBootstrap.Row,
+							null,
+							_react2.default.createElement(_reactBootstrap.Col, { sm: 2 }),
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ sm: 8 },
+								_react2.default.createElement(
+									_reactBootstrap.Row,
+									null,
+									contacts.map(function (contact) {
+										return _react2.default.createElement(_ContactIcon2.default, {
+											img: contact.img,
+											url: contact.url,
+											text: contact.text
+										});
+									})
+								)
+							),
+							_react2.default.createElement(_reactBootstrap.Col, { sm: 2 })
+						)
+					)
 				);
 			}
 		}]);
@@ -49533,6 +49569,82 @@
 	}(_react.Component);
 
 	exports.default = AppPopover;
+
+/***/ },
+/* 551 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(224);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ContactIcon = function (_Component) {
+		_inherits(ContactIcon, _Component);
+
+		function ContactIcon() {
+			_classCallCheck(this, ContactIcon);
+
+			return _possibleConstructorReturn(this, (ContactIcon.__proto__ || Object.getPrototypeOf(ContactIcon)).apply(this, arguments));
+		}
+
+		_createClass(ContactIcon, [{
+			key: "render",
+			value: function render() {
+
+				return _react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(
+						_reactBootstrap.Col,
+						{ sm: 4 },
+						_react2.default.createElement(_reactBootstrap.Thumbnail, {
+							href: this.props.url,
+							alt: this.props.text,
+							src: this.props.img,
+							target: "_blank",
+							style: styles.thumb
+						})
+					)
+				);
+			}
+		}]);
+
+		return ContactIcon;
+	}(_react.Component);
+
+	var styles = {
+		thumb: {
+			backgroundColor: "transparent",
+			border: "0px",
+			width: "60%",
+			margin: "auto"
+		}
+
+	};
+
+	exports.default = ContactIcon;
+
+	/*
+
+	*/
 
 /***/ }
 /******/ ]);
