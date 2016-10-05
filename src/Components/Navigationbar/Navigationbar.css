@@ -1,0 +1,14 @@
+.Navigationbar-main{
+	background-color: #FFFFFF;
+	border: none;
+	border-bottom: 1px #CCCCCC solid;
+	border-radius: 0px;
+}
+
+.Navigationbar-name{
+	font-size: 28pt;
+}
+
+.Navigationbar-links{
+	font-size: 12pt;
+}

@@ -1,0 +1,35 @@
+.About-skills{    
+	padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px #CCCCCC solid;
+    font-size: 18pt;
+}
+
+.About-headshot{
+	float: right;
+	max-width: 200px;
+	max-height: 200px;
+	margin: 5px 20px 10px 25px;
+	border: 1px #CCCCCC solid;
+}
+
+@media screen and (max-width: 480px) {
+
+	.About-skills{    
+	padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px #CCCCCC solid;
+    font-size: 15pt;
+}
+	.About-headshot{
+		max-width: auto;
+		max-height: auto;
+		float: none;
+		margin: auto;
+		margin-top: 7%;
+		margin-bottom: 7%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

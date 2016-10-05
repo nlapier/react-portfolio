@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from "react-bootstrap";
-import Radium from "radium";
+import "./Navigationbar.css";
 
   
-class Navigation extends Component {
+class Navigationbar extends Component {
 
 	render() {
 
 		return (
-			<Navbar style={styles.nav}>
+			<Navbar className="Navigationbar-main">
 				<Navbar.Header>
 					<Navbar.Brand>
-						<a href="#" style={styles.name}>Nathaniel LaPier</a>
+						<a href="#" className="Navigationbar-name">Nathaniel LaPier</a>
 					</Navbar.Brand>
 					<Navbar.Toggle />
 				</Navbar.Header>
 				
 				<Navbar.Collapse>
 					<Nav pullRight>
-						<NavItem eventKey={1} href="#/">About Me</NavItem>
-						<NavItem eventKey={2} href="#/Portfolio">Portfolio</NavItem>
-						<NavItem eventKey={3} href="#/Contact">Contact</NavItem>
+						<NavItem eventKey={1} href="#/" className="Navigationbar-links">About Me</NavItem>
+						<NavItem eventKey={2} href="#/Portfolio" className="Navigationbar-links">Portfolio</NavItem>
+						<NavItem eventKey={3} href="#/Contact" className="Navigationbar-links">Contact</NavItem>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
@@ -28,19 +28,7 @@ class Navigation extends Component {
 	}
 }
 
-export default Radium(Navigation);
-
-const styles ={
-	nav:{
-		"background-color": "#FFFFFF",
-		"border": "none",
-		"border-bottom": "1px #CCCCCC solid",
-		"border-radius": "0px"
-	},
-	name:{
-		"font-size": "28pt"
-	}
-}
+export default Navigationbar;
 
 
 /*

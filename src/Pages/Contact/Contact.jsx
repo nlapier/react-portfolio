@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
-import Titlebar from "./Titlebar";
-import ContactIcon from "./ContactIcon";
-import Paragraph from "./Paragraph";
+import Titlebar from "../../Components/Titlebar/Titlebar.jsx";
+import ContactIcon from "../../Components/ContactIcon/ContactIcon.jsx";
+import Paragraph from "../../Components//Paragraph/Paragraph.jsx";
+import "./Contact.css";
 
 
 

@@ -6,23 +6,21 @@ import { Route, Router, hashHistory } from 'react-router';
 //===Import Components===
 
 //Base component, including nav bar
-import Application from './Components/Application.jsx';
+import Application from './src/Pages/Application/Application.jsx';
 
 //About section
-import About from './Components/About.jsx';
+import About from './src/Pages/About/About.jsx';
 
 //Portfolio section
-import Portfolio from './Components/Portfolio.jsx';
+import Portfolio from './src/Pages/Portfolio/Portfolio.jsx';
 
 //Contact page
-import Contact from './Components/Contact.jsx';
+import Contact from './src/Pages/Contact/Contact.jsx';
 
 export default (
-	<Router history={hashHistory}>
 		<Route component={Application}>
 			<Route path="/" component={About} />
 			<Route path="Portfolio" component={Portfolio} />
 			<Route path="Contact" component={Contact} />
 		</Route>
-	</Router>
 );
