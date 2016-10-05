@@ -1,7 +1,7 @@
 import React, { Component, cloneElement } from 'react';
 import {Grid, Row, Col} from "react-bootstrap";
 import Navbar from "./Navbar";
-import styles from "./Application.css";
+import "./Application.css";
 
 
 class Application extends Component {
@@ -17,7 +17,7 @@ class Application extends Component {
 
 				<Grid>
 
-					<div id="Application" className={styles.Application_main}>
+					<div id="Application" className="Application_main">
 
 						{
 							cloneElement(this.props.children)

@@ -1,6 +1,11 @@
 .Application_main: {
-		max-width: 900px;
-		align-items: center;
-		margin: 0 auto;
-		position: relative
-	}
+	max-width: 900px;
+	align-items: center;
+	margin: 0 auto;
+	position: relative;
+}
+
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color: #FAFAFA;
+}

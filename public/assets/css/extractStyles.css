@@ -1,0 +1,26 @@
+.Application_main: {
+	max-width: 900px;
+	align-items: center;
+	margin: 0 auto;
+	position: relative;
+}
+
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color: #FAFAFA;
+}	.Titlebar_title {
+		text-align: center;
+		color: #DFF0D8;
+		margin-top: 70px;
+		margin-bottom: 4%;
+		font-size: 70pt;
+		font-style: bold;
+		border-top: 2px #CCCCCC solid;
+		border-bottom: 2px #CCCCCC solid;
+		padding-bottom: 10px;
+	}
+
+
+
+	
+/*# sourceMappingURL=extractStyles.css.map*/
