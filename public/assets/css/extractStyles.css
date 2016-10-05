@@ -1,14 +1,24 @@
-.Application_main: {
+.Navigationbar-main{
+	background-color: #FFFFFF;
+	border: none;
+	border-bottom: 1px #CCCCCC solid;
+	border-radius: 0px;
+}
+
+.Navigationbar-name{
+	font-size: 28pt;
+}
+
+.Navigationbar-links{
+	font-size: 12pt;
+}.Application_main{
 	max-width: 900px;
 	align-items: center;
 	margin: 0 auto;
 	position: relative;
 }
 
-body{
-	font-family: 'Open Sans Condensed', sans-serif;
-	background-color: #FAFAFA;
-}	.Titlebar_title {
+	.Titlebar-title {
 		text-align: center;
 		color: #DFF0D8;
 		margin-top: 70px;
@@ -22,5 +32,67 @@ body{
 
 
 
-	
+	.About-skills{    
+	padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px #CCCCCC solid;
+    font-size: 18pt;
+}
+
+.About-headshot{
+	float: right;
+	max-width: 200px;
+	max-height: 200px;
+	margin: 5px 20px 10px 25px;
+	border: 1px #CCCCCC solid;
+}
+
+@media screen and (max-width: 480px) {
+
+	.About-skills{    
+	padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px #CCCCCC solid;
+    font-size: 15pt;
+}
+	.About-headshot{
+		max-width: auto;
+		max-height: auto;
+		float: none;
+		margin: auto;
+		margin-top: 7%;
+		margin-bottom: 7%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}.PortfolioApp-main{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.PortfolioApp-img{
+/*	border: 2px #CCCCCC solid;
+*/	padding: 1%;
+	margin: auto;
+	width: 100%;
+	border: 2px #CCCCCC solid;
+}
+
+@media screen and (max-width: 480px){
+
+	.PortfolioApp-main{
+		width: 85%;
+	}
+
+}
+.ContactIcon-thumb {
+	background-color: transparent;
+	border: 0px;
+	width: 60%;
+	margin: auto;
+}
+
 /*# sourceMappingURL=extractStyles.css.map*/

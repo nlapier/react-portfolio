@@ -1,0 +1,15 @@
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color: #FAFAFA;
+}
+
+p{
+	font-size: 22pt;
+}
+
+@media screen and (max-width: 480px){
+
+	p{
+		font-size: 20pt;
+	}
+}

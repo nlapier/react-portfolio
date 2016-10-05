@@ -13,7 +13,7 @@ class Titlebar extends Component {
 				<Col xsHidden md={2}></Col>
 
 				<Col xs={12} md={8}>
-					<h1 className="Titlebar_title">{this.props.title}</h1>
+					<h1 className="Titlebar-title">{this.props.title}</h1>
 				</Col>
 
 				<Col xsHidden md={2}></Col>

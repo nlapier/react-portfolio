@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Image, Overlay } from "react-bootstrap";
-import AppPopover from "./AppPopover.jsx"
+import AppPopover from "../AppPopover/AppPopover.jsx";
+import "./PortfolioApp.css";
 
 
 class PortfolioApp extends Component {
@@ -36,14 +37,14 @@ class PortfolioApp extends Component {
 
 		return (
 			<div 
-			style={styles.div}
+			className="PortfolioApp-main"
 			onMouseEnter={this.mouseIn}
 			onMouseLeave={this.mouseOut}
 			>
 				<a href={url} target="_blank">
 					<Image 
+						className="PortfolioApp-img"
 						src={img} 
-						style={styles.img} 
 						responsive
 					/>
 				</a>
@@ -64,24 +65,6 @@ class PortfolioApp extends Component {
 	}
 }
 
-
-//Stylin'
-const styles ={
-	div:{
-		width: "60%",
-		margin: "0 auto",
-		marginTop: "3%",
-		marginBottom: "3%"
-
-	},
-	img: {
-		// "border": "2px #CCCCCC solid",
-		padding: "1%",
-		margin: "auto",
-		width: "100%",
-		border: "2px #CCCCCC solid"
-	}
-}
 
 export default PortfolioApp;
 

@@ -1,6 +1,6 @@
 import React, { Component, cloneElement } from 'react';
 import {Grid, Row, Col} from "react-bootstrap";
-import Navbar from "./Navbar";
+import Navigationbar from "../../Components/Navigationbar/Navigationbar.jsx";
 import "./Application.css";
 
 
@@ -13,7 +13,7 @@ class Application extends Component {
 
 			<div>
 
-				<Navbar/>
+				<Navigationbar/>
 
 				<Grid>
 

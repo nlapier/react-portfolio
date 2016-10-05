@@ -1,0 +1,22 @@
+.PortfolioApp-main{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.PortfolioApp-img{
+/*	border: 2px #CCCCCC solid;
+*/	padding: 1%;
+	margin: auto;
+	width: 100%;
+	border: 2px #CCCCCC solid;
+}
+
+@media screen and (max-width: 480px){
+
+	.PortfolioApp-main{
+		width: 85%;
+	}
+
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Thumbnail } from "react-bootstrap";
+import "./ContactIcon.css";
 
 class ContactIcon extends Component {
 
@@ -14,23 +15,13 @@ class ContactIcon extends Component {
 					alt={this.props.text} 
 					src={this.props.img} 
 					target="_blank"
-					style={styles.thumb}
+					className="ContactIcon-thumb"
 					/>
 
 				</Col> 
 			</div>
 		)
 	}
-}
-
-const styles ={
-	thumb:{
-		backgroundColor: "transparent",
-		border: "0px",
-		width: "60%",
-		margin: "auto"
-	}
-
 }
 
 export default ContactIcon;

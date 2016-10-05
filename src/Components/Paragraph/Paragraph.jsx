@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Bootstrap from "react-bootstrap";
-import Radium from "radium";
 
 class About extends Component {
 
@@ -8,7 +7,7 @@ class About extends Component {
 
 		return (
 
-			<p style={styles.p}>
+			<p>
 				{this.props.text}
 			</p>
 
@@ -16,7 +15,11 @@ class About extends Component {
 	}
 }
 
-export default Radium(About);
+export default About;
+
+
+
+/*
 
 const styles = {
 	p:{
@@ -24,10 +27,6 @@ const styles = {
 		"text-justify": "distribute"
 	}
 }
-
-/*
-
-
 
 */
 
