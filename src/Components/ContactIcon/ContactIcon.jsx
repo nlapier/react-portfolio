@@ -14,7 +14,8 @@ class ContactIcon extends Component {
 					href={this.props.url} 
 					alt={this.props.text} 
 					src={this.props.img} 
-					target="_blank"
+					target={this.props.target}
+					onClick={this.props.onClick}
 					className="ContactIcon-thumb"
 					/>
 

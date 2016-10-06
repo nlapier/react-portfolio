@@ -2,31 +2,50 @@ import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
 import Titlebar from "../../Components/Titlebar/Titlebar.jsx";
 import ContactIcon from "../../Components/ContactIcon/ContactIcon.jsx";
-import Paragraph from "../../Components//Paragraph/Paragraph.jsx";
+import ContactForm from "../../Components/ContactForm/ContactForm.jsx"
 import "./Contact.css";
 
 
 
 class Contact extends Component {
 
-	
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			showForm: false
+		};
+
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick(){
+		this.setState({showForm: !this.state.showForm});
+		console.log("showForm: ", this.state.showForm);
+	}
 
 	render() {
 		const contacts = [
 			{
 				img: "/assets/images/linkedin.png",
 				url: "https://www.linkedin.com/in/nathaniel-lapier-6637244a",
-				text: "LinkedIn"
+				text: "LinkedIn",
+				target:"_blank",
+				onClick: null
 			},
 			{
 				img: "/assets/images/github.png",
 				url: "https://github.com/nlapier",
-				text: "Github"
+				text: "Github",
+				target:"_blank",
+				onClick: null
 			},
 			{
 				img: "/assets/images/email.png",
 				url: "#",
-				text: "Email"
+				text: "Email",
+				target: "#",
+				onClick: this.handleClick
 			}
 		]
 
@@ -46,8 +65,14 @@ class Contact extends Component {
 											img={contact.img}
 											url={contact.url}
 											text={contact.text}
+											target={contact.target}
+											onClick={contact.onClick}
 										/>
 									)}
+								</Row>
+
+								<Row>
+									{this.state.showForm ? <ContactForm /> : null}
 								</Row>
 							</Col>
 						<Col sm={2}></Col>

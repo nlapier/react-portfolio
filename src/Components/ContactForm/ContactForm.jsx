@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Bootstrap from "react-bootstrap";
+import { FormGroup, FormControl, ControlLabel, Checkbox } from "react-bootstrap";
 import "./ContactForm.css";
 
 class ContactForm extends Component {
@@ -14,26 +14,26 @@ class ContactForm extends Component {
 
 		this.handleEmailChange = this.handleEmailChange.bind(this);
 		this.handleMessageChange = this.handleMessageChange.bind(this);
-	},
+	}
 
-	getValidationState() {
+	// getValidationState() {
 		
-	},
+	// }
 
 	handleEmailChange(e) {
 		this.setState({ emailValue: e.target.value });
-	},
+	}
 
 	handleMessageChange(e) {
 		this.setState({ messageValue: e.target.value });
-	},
+	}
 
 	render() {
 		return (
 			<form>
 				<FormGroup
 					controlId="formBasicText"
-					validationState={this.getValidationState()}
+					// validationState={this.getValidationState()}
 				>
 
 					<ControlLabel>Your Email</ControlLabel>
@@ -58,5 +58,7 @@ class ContactForm extends Component {
 			</form>
 		);
 	}
-
 }
+
+export default ContactForm;
+

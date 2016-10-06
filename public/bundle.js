@@ -44997,9 +44997,9 @@
 
 	var _ContactIcon2 = _interopRequireDefault(_ContactIcon);
 
-	var _Paragraph = __webpack_require__(485);
+	var _ContactForm = __webpack_require__(501);
 
-	var _Paragraph2 = _interopRequireDefault(_Paragraph);
+	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 
 	__webpack_require__(499);
 
@@ -45014,27 +45014,46 @@
 	var Contact = function (_Component) {
 		_inherits(Contact, _Component);
 
-		function Contact() {
+		function Contact(props) {
 			_classCallCheck(this, Contact);
 
-			return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this, props));
+
+			_this.state = {
+				showForm: false
+			};
+
+			_this.handleClick = _this.handleClick.bind(_this);
+			return _this;
 		}
 
 		_createClass(Contact, [{
+			key: "handleClick",
+			value: function handleClick() {
+				this.setState({ showForm: !this.state.showForm });
+				console.log("showForm: ", this.state.showForm);
+			}
+		}, {
 			key: "render",
 			value: function render() {
 				var contacts = [{
 					img: "/assets/images/linkedin.png",
 					url: "https://www.linkedin.com/in/nathaniel-lapier-6637244a",
-					text: "LinkedIn"
+					text: "LinkedIn",
+					target: "_blank",
+					onClick: null
 				}, {
 					img: "/assets/images/github.png",
 					url: "https://github.com/nlapier",
-					text: "Github"
+					text: "Github",
+					target: "_blank",
+					onClick: null
 				}, {
 					img: "/assets/images/email.png",
 					url: "#",
-					text: "Email"
+					text: "Email",
+					target: "#",
+					onClick: this.handleClick
 				}];
 
 				return _react2.default.createElement(
@@ -45056,9 +45075,16 @@
 									return _react2.default.createElement(_ContactIcon2.default, {
 										img: contact.img,
 										url: contact.url,
-										text: contact.text
+										text: contact.text,
+										target: contact.target,
+										onClick: contact.onClick
 									});
 								})
+							),
+							_react2.default.createElement(
+								_reactBootstrap.Row,
+								null,
+								this.state.showForm ? _react2.default.createElement(_ContactForm2.default, null) : null
 							)
 						),
 						_react2.default.createElement(_reactBootstrap.Col, { sm: 2 })
@@ -45129,7 +45155,8 @@
 							href: this.props.url,
 							alt: this.props.text,
 							src: this.props.img,
-							target: "_blank",
+							target: this.props.target,
+							onClick: this.props.onClick,
 							className: "ContactIcon-thumb"
 						})
 					)
@@ -45155,6 +45182,122 @@
 /***/ },
 /* 498 */,
 /* 499 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 500 */,
+/* 501 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(224);
+
+	__webpack_require__(502);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ContactForm = function (_Component) {
+		_inherits(ContactForm, _Component);
+
+		function ContactForm(props) {
+			_classCallCheck(this, ContactForm);
+
+			var _this = _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
+
+			_this.state = {
+				emailValue: "",
+				messageValue: ""
+			};
+
+			_this.handleEmailChange = _this.handleEmailChange.bind(_this);
+			_this.handleMessageChange = _this.handleMessageChange.bind(_this);
+			return _this;
+		}
+
+		// getValidationState() {
+
+		// }
+
+		_createClass(ContactForm, [{
+			key: "handleEmailChange",
+			value: function handleEmailChange(e) {
+				this.setState({ emailValue: e.target.value });
+			}
+		}, {
+			key: "handleMessageChange",
+			value: function handleMessageChange(e) {
+				this.setState({ messageValue: e.target.value });
+			}
+		}, {
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"form",
+					null,
+					_react2.default.createElement(
+						_reactBootstrap.FormGroup,
+						{
+							controlId: "formBasicText"
+							// validationState={this.getValidationState()}
+						},
+						_react2.default.createElement(
+							_reactBootstrap.ControlLabel,
+							null,
+							"Your Email"
+						),
+						_react2.default.createElement(_reactBootstrap.FormControl, {
+							type: "email",
+							value: this.state.emailValue,
+							placeholder: "Email",
+							onChange: this.handleEmailChange
+						}),
+						_react2.default.createElement(
+							_reactBootstrap.ControlLabel,
+							null,
+							"Your Message"
+						),
+						_react2.default.createElement(_reactBootstrap.FormControl, {
+							componentClass: "textarea",
+							value: this.state.messageValue,
+							placeholder: "Message",
+							onChange: this.handleEmailChange
+						}),
+						_react2.default.createElement(
+							_reactBootstrap.Checkbox,
+							{ checked: true },
+							"Email a copy to your inbox"
+						)
+					)
+				);
+			}
+		}]);
+
+		return ContactForm;
+	}(_react.Component);
+
+	exports.default = ContactForm;
+
+/***/ },
+/* 502 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
