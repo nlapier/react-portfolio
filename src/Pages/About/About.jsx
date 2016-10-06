@@ -11,50 +11,52 @@ class About extends Component {
 
 		return (
 
-			<Row>
-				<Col xs={1}></Col>
+			<div>
+				<Titlebar title="About Me" />
 
-				<Col xs={10}>
+				<Row>
+					<Col xs={1}></Col>
 
-					<Titlebar title="About Me" />
+					<Col xs={10}>
 
-					<Row className="show-grid">
+						<Row className="show-grid">
 
-						<img 
-							src="/assets/images/Headshot2.jpg" 
-							alt="Nathaniel LaPier" 
-							className="img-square img-responsive About-headshot" 
-						/>
+							<img 
+								src="/assets/images/Headshot2.jpg" 
+								alt="Nathaniel LaPier" 
+								className="img-square img-responsive About-headshot" 
+							/>
 
-						<Paragraph text={bioText} />
+							<Paragraph text={bioText} />
 
-					</Row>
+						</Row>
 
-					<br />
-					<br />
-					<br />
+						<br />
+						<br />
+						<br />
 
-					<Row className="text-center">
-						<p>
-							In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:
-						</p>
+						<Row className="text-center">
+							<p>
+								In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:
+							</p>
 
-						<ul className="list-inline text-center">
-							<li className="About-skills" style={{borderLeft: "none"}}>jQuery</li>
-							<li className="About-skills">Node.js</li>
-							<li className="About-skills">Express.js</li>
-							<li className="About-skills">Firebase</li>
-							<li className="About-skills">MySQL & Sequelize</li>
-							<li className="About-skills">MongoDB & Mongoose</li>
-							<li className="About-skills">React.js</li>
-							<li className="About-skills">PHP & Laravel</li>
+							<ul className="list-inline text-center">
+								<li className="About-skills" style={{borderLeft: "none"}}>jQuery</li>
+								<li className="About-skills">Node.js</li>
+								<li className="About-skills">Express.js</li>
+								<li className="About-skills">Firebase</li>
+								<li className="About-skills">MySQL & Sequelize</li>
+								<li className="About-skills">MongoDB & Mongoose</li>
+								<li className="About-skills">React.js</li>
+								<li className="About-skills">PHP & Laravel</li>
 
-						</ul>
-					</Row>
-				</Col>
+							</ul>
+						</Row>
+					</Col>
 
-				<Col xs={1}></Col>
-			</Row>
+					<Col xs={1}></Col>
+				</Row>
+			</div>
 		);
 	}
 }

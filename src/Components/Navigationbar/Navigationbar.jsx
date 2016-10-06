@@ -10,9 +10,7 @@ class Navigationbar extends Component {
 		return (
 			<Navbar className="Navigationbar-main">
 				<Navbar.Header>
-					<Navbar.Brand>
 						<a href="#" className="Navigationbar-name">Nathaniel LaPier</a>
-					</Navbar.Brand>
 					<Navbar.Toggle />
 				</Navbar.Header>
 				
