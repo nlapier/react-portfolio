@@ -9,6 +9,8 @@ import "./Contact.css";
 
 class Contact extends Component {
 
+	
+
 	render() {
 		const contacts = [
 			{
