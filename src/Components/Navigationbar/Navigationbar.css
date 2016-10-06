@@ -7,8 +7,23 @@
 
 .Navigationbar-name{
 	font-size: 28pt;
+	color: #80C978;
 }
 
 .Navigationbar-links{
 	font-size: 12pt;
 }
+
+.Navigationbar-links:hover{
+	color: #80C978;
+}
+
+
+
+/*
+
+.navbar-default, .navbar-brand{
+	font-size: 28pt;
+	color: #80C978;
+}
+*/

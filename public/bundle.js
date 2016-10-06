@@ -44235,13 +44235,9 @@
 						_reactBootstrap.Navbar.Header,
 						null,
 						_react2.default.createElement(
-							_reactBootstrap.Navbar.Brand,
-							null,
-							_react2.default.createElement(
-								"a",
-								{ href: "#", className: "Navigationbar-name" },
-								"Nathaniel LaPier"
-							)
+							"a",
+							{ href: "#", className: "Navigationbar-name" },
+							"Nathaniel LaPier"
 						),
 						_react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
 					),
@@ -44388,81 +44384,85 @@
 				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
 
 				return _react2.default.createElement(
-					_reactBootstrap.Row,
+					"div",
 					null,
-					_react2.default.createElement(_reactBootstrap.Col, { xs: 1 }),
+					_react2.default.createElement(_Titlebar2.default, { title: "About Me" }),
 					_react2.default.createElement(
-						_reactBootstrap.Col,
-						{ xs: 10 },
-						_react2.default.createElement(_Titlebar2.default, { title: "About Me" }),
+						_reactBootstrap.Row,
+						null,
+						_react2.default.createElement(_reactBootstrap.Col, { xs: 1 }),
 						_react2.default.createElement(
-							_reactBootstrap.Row,
-							{ className: "show-grid" },
-							_react2.default.createElement("img", {
-								src: "/assets/images/Headshot2.jpg",
-								alt: "Nathaniel LaPier",
-								className: "img-square img-responsive About-headshot"
-							}),
-							_react2.default.createElement(_Paragraph2.default, { text: bioText })
-						),
-						_react2.default.createElement("br", null),
-						_react2.default.createElement("br", null),
-						_react2.default.createElement("br", null),
-						_react2.default.createElement(
-							_reactBootstrap.Row,
-							{ className: "text-center" },
+							_reactBootstrap.Col,
+							{ xs: 10 },
 							_react2.default.createElement(
-								"p",
-								null,
-								"In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:"
+								_reactBootstrap.Row,
+								{ className: "show-grid" },
+								_react2.default.createElement("img", {
+									src: "/assets/images/Headshot2.jpg",
+									alt: "Nathaniel LaPier",
+									className: "img-square img-responsive About-headshot"
+								}),
+								_react2.default.createElement(_Paragraph2.default, { text: bioText })
 							),
+							_react2.default.createElement("br", null),
+							_react2.default.createElement("br", null),
+							_react2.default.createElement("br", null),
 							_react2.default.createElement(
-								"ul",
-								{ className: "list-inline text-center" },
+								_reactBootstrap.Row,
+								{ className: "text-center" },
 								_react2.default.createElement(
-									"li",
-									{ className: "About-skills", style: { borderLeft: "none" } },
-									"jQuery"
+									"p",
+									null,
+									"In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:"
 								),
 								_react2.default.createElement(
-									"li",
-									{ className: "About-skills" },
-									"Node.js"
-								),
-								_react2.default.createElement(
-									"li",
-									{ className: "About-skills" },
-									"Express.js"
-								),
-								_react2.default.createElement(
-									"li",
-									{ className: "About-skills" },
-									"Firebase"
-								),
-								_react2.default.createElement(
-									"li",
-									{ className: "About-skills" },
-									"MySQL & Sequelize"
-								),
-								_react2.default.createElement(
-									"li",
-									{ className: "About-skills" },
-									"MongoDB & Mongoose"
-								),
-								_react2.default.createElement(
-									"li",
-									{ className: "About-skills" },
-									"React.js"
-								),
-								_react2.default.createElement(
-									"li",
-									{ className: "About-skills" },
-									"PHP & Laravel"
+									"ul",
+									{ className: "list-inline text-center" },
+									_react2.default.createElement(
+										"li",
+										{ className: "About-skills", style: { borderLeft: "none" } },
+										"jQuery"
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "About-skills" },
+										"Node.js"
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "About-skills" },
+										"Express.js"
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "About-skills" },
+										"Firebase"
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "About-skills" },
+										"MySQL & Sequelize"
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "About-skills" },
+										"MongoDB & Mongoose"
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "About-skills" },
+										"React.js"
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "About-skills" },
+										"PHP & Laravel"
+									)
 								)
 							)
-						)
-					),
-					_react2.default.createElement(_reactBootstrap.Col, { xs: 1 })
+						),
+						_react2.default.createElement(_reactBootstrap.Col, { xs: 1 })
+					)
 				);
 			}
 		}]);
@@ -45043,29 +45043,25 @@
 					_react2.default.createElement(_Titlebar2.default, { title: "Contact Me" }),
 					_react2.default.createElement("br", null),
 					_react2.default.createElement(
-						_reactBootstrap.Grid,
+						_reactBootstrap.Row,
 						null,
+						_react2.default.createElement(_reactBootstrap.Col, { sm: 2 }),
 						_react2.default.createElement(
-							_reactBootstrap.Row,
-							null,
-							_react2.default.createElement(_reactBootstrap.Col, { sm: 2 }),
+							_reactBootstrap.Col,
+							{ sm: 8 },
 							_react2.default.createElement(
-								_reactBootstrap.Col,
-								{ sm: 8 },
-								_react2.default.createElement(
-									_reactBootstrap.Row,
-									null,
-									contacts.map(function (contact) {
-										return _react2.default.createElement(_ContactIcon2.default, {
-											img: contact.img,
-											url: contact.url,
-											text: contact.text
-										});
-									})
-								)
-							),
-							_react2.default.createElement(_reactBootstrap.Col, { sm: 2 })
-						)
+								_reactBootstrap.Row,
+								null,
+								contacts.map(function (contact) {
+									return _react2.default.createElement(_ContactIcon2.default, {
+										img: contact.img,
+										url: contact.url,
+										text: contact.text
+									});
+								})
+							)
+						),
+						_react2.default.createElement(_reactBootstrap.Col, { sm: 2 })
 					)
 				);
 			}

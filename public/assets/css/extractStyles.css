@@ -7,11 +7,26 @@
 
 .Navigationbar-name{
 	font-size: 28pt;
+	color: #80C978;
 }
 
 .Navigationbar-links{
 	font-size: 12pt;
-}.Application_main{
+}
+
+.Navigationbar-links:hover{
+	color: #80C978;
+}
+
+
+
+/*
+
+.navbar-default, .navbar-brand{
+	font-size: 28pt;
+	color: #80C978;
+}
+*/.Application_main{
 	max-width: 900px;
 	align-items: center;
 	margin: 0 auto;
@@ -20,7 +35,7 @@
 
 	.Titlebar-title {
 		text-align: center;
-		color: #DFF0D8;
+		color: #70BCC9;
 		margin-top: 70px;
 		margin-bottom: 4%;
 		font-size: 70pt;
@@ -92,7 +107,9 @@
 	background-color: transparent;
 	border: 0px;
 	width: 60%;
-	margin: auto;
+	margin: 0 auto;
 }
-
+/*.Contact-main{
+	margin: 0 auto;
+}*/
 /*# sourceMappingURL=extractStyles.css.map*/

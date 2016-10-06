@@ -35,12 +35,10 @@ class Contact extends Component {
 
 				<br />
 
-				<Grid>
 					<Row>
 						<Col sm={2}></Col>
 							<Col sm={8}>
 								<Row>
-
 									{contacts.map((contact) =>
 										<ContactIcon
 											img={contact.img}
@@ -48,12 +46,10 @@ class Contact extends Component {
 											text={contact.text}
 										/>
 									)}
-
 								</Row>
 							</Col>
 						<Col sm={2}></Col>
 					</Row>
-				</Grid>
 
 			</div>
 		);
