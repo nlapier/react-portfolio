@@ -45229,6 +45229,7 @@
 			_this.handleMessageChange = _this.handleMessageChange.bind(_this);
 			_this.handleCheckboxChange = _this.handleCheckboxChange.bind(_this);
 			_this.messageSubmit = _this.messageSubmit.bind(_this);
+			_this.clearInput = _this.clearInput.bind(_this);
 			return _this;
 		}
 
@@ -45252,6 +45253,14 @@
 				this.setState({ boxIsChecked: !this.state.boxIsChecked });
 			}
 		}, {
+			key: "clearInput",
+			value: function clearInput() {
+				this.setState({
+					emailValue: "",
+					messageValue: ""
+				});
+			}
+		}, {
 			key: "messageSubmit",
 			value: function messageSubmit() {
 				_jquery2.default.ajax({
@@ -45264,6 +45273,8 @@
 				}).done(function (response) {
 					console.log("response: " + response);
 				});
+
+				this.clearInput();
 			}
 		}, {
 			key: "render",
@@ -45296,11 +45307,6 @@
 							placeholder: "",
 							onChange: this.handleEmailChange
 						}),
-						_react2.default.createElement(
-							_reactBootstrap.Checkbox,
-							{ checked: true, onChange: this.handleCheckboxChange },
-							"Email a copy to your inbox"
-						),
 						_react2.default.createElement(
 							_reactBootstrap.Button,
 							{ type: "submit", onClick: this.messageSubmit },

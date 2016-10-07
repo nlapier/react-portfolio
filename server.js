@@ -22,41 +22,21 @@ app.get('/', (req, res) => {
 });
 
 //Slack messaging
-// app.post("/email", function (request, response){
 
-// 	const QUERY_URL = process.env.QUERY_URL;
-// 	let slackBody = JSON.stringify({
-// 		text: request.body
-// 	});
-
-// 	console.log("slackBody: ", slackBody);
-
-// 	$.ajax({
-// 		url: QUERY_URL,
-// 		type: 'POST',
-// 		data: slackBody
-// 	}).done(function(response){
-// 		console.log("response: " + response);
-// 	})
-// })
-
-////
 app.post('/email', (req, res) => {
 	request.post({
 		headers: {'content-type' : 'application/x-www-form-urlencoded'},
 		url: process.env.QUERY_URL,
 		body: JSON.stringify({ 
 			"text": req.body.message,
-			"contact": req.body.email
+			"attachments":[{
+				pretext: "Contact at: " + req.body.email
+			}]
 		})
 	}, function(error, response, body){
 		console.log(body);
 	});
 })
-
-
-
-/////
 
 //Listener
 app.listen(PORT, () => {

@@ -18,6 +18,7 @@ class ContactForm extends Component {
 		this.handleMessageChange = this.handleMessageChange.bind(this);
 		this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
 		this.messageSubmit = this.messageSubmit.bind(this);
+		this.clearInput = this.clearInput.bind(this);
 	}
 
 	// getValidationState() {
@@ -36,6 +37,13 @@ class ContactForm extends Component {
 		this.setState({boxIsChecked: !this.state.boxIsChecked})
 	}
 
+	clearInput(){
+		this.setState({
+			emailValue: "",
+			messageValue: ""
+		});
+	}
+
 	messageSubmit(){
 		$.ajax({
 	        url: "/email",
@@ -46,7 +54,9 @@ class ContactForm extends Component {
 	        }
 	    }).done(function(response){
 	        console.log("response: " + response);
-	    })
+	    });
+	    
+	    this.clearInput();
 	}
 
 	render() {
@@ -69,8 +79,6 @@ class ContactForm extends Component {
 						placeholder=""
 						onChange={this.handleEmailChange}
 					/>
-
-      				<Checkbox checked onChange={this.handleCheckboxChange}>Email a copy to your inbox</Checkbox>
 
 				    <Button type="submit" onClick={this.messageSubmit}>
 				      Submit
