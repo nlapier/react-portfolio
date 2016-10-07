@@ -46,7 +46,8 @@ app.post('/email', (req, res) => {
 		headers: {'content-type' : 'application/x-www-form-urlencoded'},
 		url: process.env.QUERY_URL,
 		body: JSON.stringify({ 
-			'text': req.body.message, 	
+			"text": req.body.message,
+			"contact": req.body.email
 		})
 	}, function(error, response, body){
 		console.log(body);
