@@ -24,10 +24,7 @@ app.post("/email", function (request, response){
 
 	const QUERY_URL = process.env.QUERY_URL;
 	let slackBody = JSON.stringify({
-					'channel': '#portfolio', 
-					'username': 'Portfolio Bot', 
-					'text': text, 
-					'icon_emoji': ':ghost:'
+		text: request.body
 	});
 
 	console.log("slackBody: ", slackBody);
