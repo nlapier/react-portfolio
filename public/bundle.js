@@ -44997,11 +44997,11 @@
 
 	var _ContactIcon2 = _interopRequireDefault(_ContactIcon);
 
-	var _ContactForm = __webpack_require__(501);
+	var _ContactForm = __webpack_require__(499);
 
 	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 
-	__webpack_require__(499);
+	__webpack_require__(502);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45181,13 +45181,6 @@
 /***/ },
 /* 498 */,
 /* 499 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 500 */,
-/* 501 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45204,7 +45197,7 @@
 
 	var _reactBootstrap = __webpack_require__(224);
 
-	__webpack_require__(502);
+	__webpack_require__(500);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45232,7 +45225,6 @@
 			_this.handleMessageChange = _this.handleMessageChange.bind(_this);
 			_this.handleCheckboxChange = _this.handleCheckboxChange.bind(_this);
 			_this.messageSubmit = _this.messageSubmit.bind(_this);
-
 			return _this;
 		}
 
@@ -45349,6 +45341,13 @@
 	*/
 
 /***/ },
+/* 500 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 501 */,
 /* 502 */
 /***/ function(module, exports) {
 

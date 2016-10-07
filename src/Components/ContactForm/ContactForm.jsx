@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FormGroup, FormControl, ControlLabel, Checkbox, Button } from "react-bootstrap";
 import "./ContactForm.css";
-
+ 
 class ContactForm extends Component {
 
 	constructor(props) {
@@ -17,7 +17,6 @@ class ContactForm extends Component {
 		this.handleMessageChange = this.handleMessageChange.bind(this);
 		this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
 		this.messageSubmit = this.messageSubmit.bind(this);
-
 	}
 
 	// getValidationState() {
@@ -52,18 +51,7 @@ class ContactForm extends Component {
 	render() {
 		return (
 			<form>
-				<FormGroup
-					controlId="formBasicText"
-					// validationState={this.getValidationState()}
-				>
-
-					<ControlLabel>Your Email</ControlLabel>
-					<FormControl
-						type="email"
-						value={this.state.emailValue}
-						placeholder="Email"
-						onChange={this.handleEmailChange}
-					/>
+				<FormGroup controlId="formBasicText">
 
 					<ControlLabel>Your Message</ControlLabel>
       				<FormControl 
@@ -71,7 +59,15 @@ class ContactForm extends Component {
       					value={this.state.messageValue}
       					placeholder="Message" 
       					onChange={this.handleMessageChange}
-      					/>
+      				/>
+
+      				<ControlLabel>Where should I contact you?</ControlLabel>
+					<FormControl
+						type="text"
+						value={this.state.emailValue}
+						placeholder=""
+						onChange={this.handleEmailChange}
+					/>
 
       				<Checkbox checked onChange={this.handleCheckboxChange}>Email a copy to your inbox</Checkbox>
 
