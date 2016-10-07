@@ -2,8 +2,10 @@
 const bodyParser = require('body-parser');
 const path = require('path');
 const express = require('express');
+const request = require('request');
+require('dotenv').config();
+
 const app = express();
-const nodemailer = require("nodemailer");
 
 //Express setup
 const PORT = process.env.PORT || 3000;
@@ -20,23 +22,40 @@ app.get('/', (req, res) => {
 });
 
 //Slack messaging
-app.post("/email", function (request, response){
+// app.post("/email", function (request, response){
 
-	const QUERY_URL = process.env.QUERY_URL;
-	let slackBody = JSON.stringify({
-		text: request.body
+// 	const QUERY_URL = process.env.QUERY_URL;
+// 	let slackBody = JSON.stringify({
+// 		text: request.body
+// 	});
+
+// 	console.log("slackBody: ", slackBody);
+
+// 	$.ajax({
+// 		url: QUERY_URL,
+// 		type: 'POST',
+// 		data: slackBody
+// 	}).done(function(response){
+// 		console.log("response: " + response);
+// 	})
+// })
+
+////
+app.post('/email', (req, res) => {
+	request.post({
+		headers: {'content-type' : 'application/x-www-form-urlencoded'},
+		url: process.env.QUERY_URL,
+		body: JSON.stringify({ 
+			'text': req.body.message, 	
+		})
+	}, function(error, response, body){
+		console.log(body);
 	});
-
-	console.log("slackBody: ", slackBody);
-
-	$.ajax({
-		url: QUERY_URL,
-		type: 'POST',
-		data: slackBody
-	}).done(function(response){
-		console.log("response: " + response);
-	})
 })
+
+
+
+/////
 
 //Listener
 app.listen(PORT, () => {
