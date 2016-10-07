@@ -17,15 +17,14 @@ class PortfolioApp extends Component {
 	}
 
 	mouseIn(e){
-		this.state.show = true;
+		this.setState({show: true})
 		console.log("enter state: ", this.state.show);
 
 	}
 
 	mouseOut(e){
-		this.state.show = false;
+		this.setState({show: false})
 		console.log("leave state: ", this.state.show);
-
 	}
 
 	render() {

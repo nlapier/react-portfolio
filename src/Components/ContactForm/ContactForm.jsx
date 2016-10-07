@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FormGroup, FormControl, ControlLabel, Checkbox } from "react-bootstrap";
+import { FormGroup, FormControl, ControlLabel, Checkbox, Button } from "react-bootstrap";
 import "./ContactForm.css";
 
 class ContactForm extends Component {
@@ -9,11 +9,15 @@ class ContactForm extends Component {
 
 		this.state = {
 			emailValue: "",
-			messageValue:""
+			messageValue:"",
+			boxIsChecked: true
 		};
 
 		this.handleEmailChange = this.handleEmailChange.bind(this);
 		this.handleMessageChange = this.handleMessageChange.bind(this);
+		this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
+		this.messageSubmit = this.messageSubmit.bind(this);
+
 	}
 
 	// getValidationState() {
@@ -26,6 +30,23 @@ class ContactForm extends Component {
 
 	handleMessageChange(e) {
 		this.setState({ messageValue: e.target.value });
+	}
+
+	handleCheckboxChange(e) {
+		this.setState({boxIsChecked: !this.state.boxIsChecked})
+	}
+
+	messageSubmit(){
+		$.ajax({
+	        url: "/email",
+	        type: "POST",
+	        data:{
+	        	email: this.state.emailValue,
+	        	message: this.state.messageValue
+	        }
+	    }).done(function(response){
+	        console.log("response: " + response);
+	    })
 	}
 
 	render() {
@@ -49,10 +70,14 @@ class ContactForm extends Component {
       					componentClass="textarea" 
       					value={this.state.messageValue}
       					placeholder="Message" 
-      					onChange={this.handleEmailChange}
+      					onChange={this.handleMessageChange}
       					/>
 
-      				<Checkbox checked>Email a copy to your inbox</Checkbox>
+      				<Checkbox checked onChange={this.handleCheckboxChange}>Email a copy to your inbox</Checkbox>
+
+				    <Button type="submit" onClick={this.messageSubmit}>
+				      Submit
+				    </Button>
 
 				</FormGroup>
 			</form>
@@ -61,4 +86,34 @@ class ContactForm extends Component {
 }
 
 export default ContactForm;
+
+
+
+
+/*
+			    $.ajax({
+			        url: queryURL,
+			        type: 'POST',
+			        data: slackBody
+			    }).done(function(response){
+
+			        console.log("response: " + response);
+         
+			    })
+
+
+			    $.ajax({
+    url: '/contactus',
+    dataType: 'json',
+    cache: false,
+    success: function(data) {
+        // Success..
+    }.bind(this),
+    error: function(xhr, status, err) {
+        console.error(status, err.toString());
+    }.bind(this)
+});
+*/
+
+
 

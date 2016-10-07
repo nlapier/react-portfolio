@@ -21,7 +21,6 @@ class Contact extends Component {
 
 	handleClick(){
 		this.setState({showForm: !this.state.showForm});
-		console.log("showForm: ", this.state.showForm);
 	}
 
 	render() {

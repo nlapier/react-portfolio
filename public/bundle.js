@@ -44822,13 +44822,13 @@
 		_createClass(PortfolioApp, [{
 			key: 'mouseIn',
 			value: function mouseIn(e) {
-				this.state.show = true;
+				this.setState({ show: true });
 				console.log("enter state: ", this.state.show);
 			}
 		}, {
 			key: 'mouseOut',
 			value: function mouseOut(e) {
-				this.state.show = false;
+				this.setState({ show: false });
 				console.log("leave state: ", this.state.show);
 			}
 		}, {
@@ -45031,7 +45031,6 @@
 			key: "handleClick",
 			value: function handleClick() {
 				this.setState({ showForm: !this.state.showForm });
-				console.log("showForm: ", this.state.showForm);
 			}
 		}, {
 			key: "render",
@@ -45225,11 +45224,15 @@
 
 			_this.state = {
 				emailValue: "",
-				messageValue: ""
+				messageValue: "",
+				boxIsChecked: true
 			};
 
 			_this.handleEmailChange = _this.handleEmailChange.bind(_this);
 			_this.handleMessageChange = _this.handleMessageChange.bind(_this);
+			_this.handleCheckboxChange = _this.handleCheckboxChange.bind(_this);
+			_this.messageSubmit = _this.messageSubmit.bind(_this);
+
 			return _this;
 		}
 
@@ -45246,6 +45249,25 @@
 			key: "handleMessageChange",
 			value: function handleMessageChange(e) {
 				this.setState({ messageValue: e.target.value });
+			}
+		}, {
+			key: "handleCheckboxChange",
+			value: function handleCheckboxChange(e) {
+				this.setState({ boxIsChecked: !this.state.boxIsChecked });
+			}
+		}, {
+			key: "messageSubmit",
+			value: function messageSubmit() {
+				$.ajax({
+					url: "/email",
+					type: "POST",
+					data: {
+						email: this.state.emailValue,
+						message: this.state.messageValue
+					}
+				}).done(function (response) {
+					console.log("response: " + response);
+				});
 			}
 		}, {
 			key: "render",
@@ -45279,12 +45301,17 @@
 							componentClass: "textarea",
 							value: this.state.messageValue,
 							placeholder: "Message",
-							onChange: this.handleEmailChange
+							onChange: this.handleMessageChange
 						}),
 						_react2.default.createElement(
 							_reactBootstrap.Checkbox,
-							{ checked: true },
+							{ checked: true, onChange: this.handleCheckboxChange },
 							"Email a copy to your inbox"
+						),
+						_react2.default.createElement(
+							_reactBootstrap.Button,
+							{ type: "submit", onClick: this.messageSubmit },
+							"Submit"
 						)
 					)
 				);
@@ -45295,6 +45322,31 @@
 	}(_react.Component);
 
 	exports.default = ContactForm;
+
+	/*
+				    $.ajax({
+				        url: queryURL,
+				        type: 'POST',
+				        data: slackBody
+				    }).done(function(response){
+
+				        console.log("response: " + response);
+	         
+				    })
+
+
+				    $.ajax({
+	    url: '/contactus',
+	    dataType: 'json',
+	    cache: false,
+	    success: function(data) {
+	        // Success..
+	    }.bind(this),
+	    error: function(xhr, status, err) {
+	        console.error(status, err.toString());
+	    }.bind(this)
+	});
+	*/
 
 /***/ },
 /* 502 */
