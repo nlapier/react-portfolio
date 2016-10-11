@@ -36,9 +36,9 @@ class PortfolioApp extends Component {
 
 		return (
 			<div 
-			className="PortfolioApp-main"
-			onMouseEnter={this.mouseIn}
-			onMouseLeave={this.mouseOut}
+				className="PortfolioApp-main"
+				onMouseEnter={this.mouseIn}
+				onMouseLeave={this.mouseOut}
 			>
 				<a href={url} target="_blank">
 					<Image 

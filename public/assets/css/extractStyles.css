@@ -109,7 +109,9 @@
 	width: 60%;
 	margin: 0 auto;
 }
-/*.Contact-main{
+.ContactForm_main{
+	border: 2px #CCCCCC solid;
+}/*.Contact-main{
 	margin: 0 auto;
 }*/
 /*# sourceMappingURL=extractStyles.css.map*/

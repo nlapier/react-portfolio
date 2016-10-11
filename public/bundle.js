@@ -45080,6 +45080,7 @@
 									});
 								})
 							),
+							_react2.default.createElement("br", null),
 							_react2.default.createElement(
 								_reactBootstrap.Row,
 								null,
@@ -45307,6 +45308,7 @@
 							placeholder: "",
 							onChange: this.handleEmailChange
 						}),
+						_react2.default.createElement("br", null),
 						_react2.default.createElement(
 							_reactBootstrap.Button,
 							{ type: "submit", onClick: this.messageSubmit },
