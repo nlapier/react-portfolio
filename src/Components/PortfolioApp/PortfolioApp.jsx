@@ -1,44 +1,22 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Image, Overlay } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import AppPopover from "../AppPopover/AppPopover.jsx";
 import "./PortfolioApp.css";
 
 
 class PortfolioApp extends Component {
 
-	constructor(props){
-		super(props);
-		this.state = {
-			show: false
-		};
-		this.mouseIn = this.mouseIn.bind(this);
-		this.mouseOut = this.mouseOut.bind(this);
-	}
-
-	mouseIn(e){
-		this.setState({show: true})
-		console.log("enter state: ", this.state.show);
-
-	}
-
-	mouseOut(e){
-		this.setState({show: false})
-		console.log("leave state: ", this.state.show);
-	}
-
 	render() {
 
-		const { url, img, title, text } = this.props;
-		let { show } = this.state;
+		const { url, img, title, text, github } = this.props;
+		// let { show } = this.state;
 
-		console.log("show: ", this.state.show);
+		// console.log("show: ", this.state.show);
 
 		return (
 			<div 
-			className="PortfolioApp-main"
-			onMouseEnter={this.mouseIn}
-			onMouseLeave={this.mouseOut}
+				className="PortfolioApp-main"
 			>
 				<a href={url} target="_blank">
 					<Image 
@@ -48,16 +26,13 @@ class PortfolioApp extends Component {
 					/>
 				</a>
 
-				<Overlay
-					show={show}
-					animation="true"
-					container={this}
-					target={() => ReactDOM.findDOMNode(this.refs.target)}
-				>
+				<div id="PortfolioApp-text" className="text-center">
+					<h3>{ text }</h3>
+					<h5>On Github:
+						<a href={github}>{ github }</a>
+					</h5>
 
-					<AppPopover title={title} text={text} />
-
-				</Overlay>
+				</div>
 
 			</div>
 		);

@@ -79,6 +79,8 @@ class ContactForm extends Component {
 						placeholder=""
 						onChange={this.handleEmailChange}
 					/>
+					
+					<br />
 
 				    <Button type="submit" onClick={this.messageSubmit}>
 				      Submit
