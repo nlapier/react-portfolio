@@ -25442,7 +25442,7 @@
 
 	var _Portfolio2 = _interopRequireDefault(_Portfolio);
 
-	var _Contact = __webpack_require__(495);
+	var _Contact = __webpack_require__(489);
 
 	var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -44381,7 +44381,7 @@
 		_createClass(About, [{
 			key: "render",
 			value: function render() {
-				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, travel, volunteer, ride my bicycle and motorcycle, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
 
 				return _react2.default.createElement(
 					"div",
@@ -44402,7 +44402,11 @@
 									alt: "Nathaniel LaPier",
 									className: "img-square img-responsive About-headshot"
 								}),
-								_react2.default.createElement(_Paragraph2.default, { text: bioText })
+								_react2.default.createElement(
+									"p",
+									null,
+									bioText
+								)
 							),
 							_react2.default.createElement("br", null),
 							_react2.default.createElement("br", null),
@@ -44420,43 +44424,38 @@
 									{ className: "list-inline text-center" },
 									_react2.default.createElement(
 										"li",
-										{ className: "About-skills", style: { borderLeft: "none" } },
-										"jQuery"
+										{ className: "About-skills" },
+										"<jQuery>"
 									),
 									_react2.default.createElement(
 										"li",
 										{ className: "About-skills" },
-										"Node.js"
+										"<Node.js>"
 									),
 									_react2.default.createElement(
 										"li",
 										{ className: "About-skills" },
-										"Express.js"
+										"<Express.js>"
 									),
 									_react2.default.createElement(
 										"li",
 										{ className: "About-skills" },
-										"Firebase"
+										"<Firebase>"
 									),
 									_react2.default.createElement(
 										"li",
 										{ className: "About-skills" },
-										"MySQL & Sequelize"
+										"<MySQL & Sequelize>"
 									),
 									_react2.default.createElement(
 										"li",
 										{ className: "About-skills" },
-										"MongoDB & Mongoose"
+										"<MongoDB & Mongoose>"
 									),
 									_react2.default.createElement(
 										"li",
 										{ className: "About-skills" },
-										"React.js"
-									),
-									_react2.default.createElement(
-										"li",
-										{ className: "About-skills" },
-										"PHP & Laravel"
+										"<React.js>"
 									)
 								)
 							)
@@ -44693,11 +44692,15 @@
 
 	var _Titlebar2 = _interopRequireDefault(_Titlebar);
 
-	var _PortfolioApp = __webpack_require__(489);
+	var _PortfolioApp = __webpack_require__(499);
 
 	var _PortfolioApp2 = _interopRequireDefault(_PortfolioApp);
 
-	__webpack_require__(493);
+	var _Paragraph = __webpack_require__(485);
+
+	var _Paragraph2 = _interopRequireDefault(_Paragraph);
+
+	__webpack_require__(503);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44720,16 +44723,24 @@
 			key: "render",
 			value: function render() {
 
+				var text = "Here are some of the projects I'm working on...";
+
 				return _react2.default.createElement(
 					"div",
 					null,
 					_react2.default.createElement(_Titlebar2.default, { title: "My Portfolio" }),
+					_react2.default.createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2.default.createElement(_Paragraph2.default, { text: text, className: "Portfolio-p" })
+					),
 					apps.map(function (app) {
 						return _react2.default.createElement(_PortfolioApp2.default, {
 							title: app.title,
 							text: app.text,
 							img: app.img,
-							url: app.url
+							url: app.url,
+							github: app.github
 						});
 					})
 				);
@@ -44751,12 +44762,14 @@
 		title: "Fresh Hangman",
 		text: "A 90s-tastic jQuery-powered experience.",
 		img: "/assets/images/prince.png",
-		url: "https://nlp-fresh-hangman.herokuapp.com/"
+		url: "https://nlp-fresh-hangman.herokuapp.com/",
+		github: "test"
 	}, {
 		title: "GIF-Explosion",
 		text: "A first-time attempt at retrieving data from a web API.",
 		img: "/assets/images/gif.png",
-		url: "https://nlp-gif-explosion.herokuapp.com/"
+		url: "https://nlp-gif-explosion.herokuapp.com/",
+		github: "test"
 	}];
 
 	exports.default = Portfolio;
@@ -44769,198 +44782,6 @@
 
 /***/ },
 /* 489 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(158);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _reactBootstrap = __webpack_require__(224);
-
-	var _AppPopover = __webpack_require__(490);
-
-	var _AppPopover2 = _interopRequireDefault(_AppPopover);
-
-	__webpack_require__(491);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var PortfolioApp = function (_Component) {
-		_inherits(PortfolioApp, _Component);
-
-		function PortfolioApp() {
-			_classCallCheck(this, PortfolioApp);
-
-			return _possibleConstructorReturn(this, (PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).apply(this, arguments));
-		}
-
-		_createClass(PortfolioApp, [{
-			key: 'render',
-			value: function render() {
-				var _props = this.props;
-				var url = _props.url;
-				var img = _props.img;
-				var title = _props.title;
-				var text = _props.text;
-				// let { show } = this.state;
-
-				// console.log("show: ", this.state.show);
-
-				return _react2.default.createElement(
-					'div',
-					{
-						className: 'PortfolioApp-main',
-						onMouseEnter: this.mouseIn,
-						onMouseLeave: this.mouseOut
-					},
-					_react2.default.createElement(
-						'a',
-						{ href: url, target: '_blank' },
-						_react2.default.createElement(_reactBootstrap.Image, {
-							className: 'PortfolioApp-img',
-							src: img,
-							responsive: true
-						})
-					),
-					_react2.default.createElement(
-						'div',
-						{ id: 'PortfolioApp-text' },
-						_react2.default.createElement(
-							'span',
-							null,
-							_react2.default.createElement(
-								'h3',
-								null,
-								title
-							)
-						),
-						_react2.default.createElement(
-							'span',
-							null,
-							_react2.default.createElement(
-								'p',
-								null,
-								text
-							)
-						)
-					)
-				);
-			}
-		}]);
-
-		return PortfolioApp;
-	}(_react.Component);
-
-	exports.default = PortfolioApp;
-
-	/*
-
-						
-
-
-		{
-			title: "GIF-Explosion",
-			text: "A 90s-tastic jQuery-powered experience.",
-			img: "/assets/images/prince.png",
-			url: "https://nlp-gif-explosion.herokuapp.com/"
-		},
-
-
-	*/
-
-/***/ },
-/* 490 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var AppPopover = function (_Component) {
-		_inherits(AppPopover, _Component);
-
-		function AppPopover() {
-			_classCallCheck(this, AppPopover);
-
-			return _possibleConstructorReturn(this, (AppPopover.__proto__ || Object.getPrototypeOf(AppPopover)).apply(this, arguments));
-		}
-
-		_createClass(AppPopover, [{
-			key: 'render',
-			value: function render() {
-
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'h3',
-						null,
-						this.props.title
-					),
-					_react2.default.createElement(
-						'p',
-						null,
-						this.props.text
-					)
-				);
-			}
-		}]);
-
-		return AppPopover;
-	}(_react.Component);
-
-	exports.default = AppPopover;
-
-/***/ },
-/* 491 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 492 */,
-/* 493 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 494 */,
-/* 495 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44981,15 +44802,15 @@
 
 	var _Titlebar2 = _interopRequireDefault(_Titlebar);
 
-	var _ContactIcon = __webpack_require__(496);
+	var _ContactIcon = __webpack_require__(490);
 
 	var _ContactIcon2 = _interopRequireDefault(_ContactIcon);
 
-	var _ContactForm = __webpack_require__(499);
+	var _ContactForm = __webpack_require__(493);
 
 	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 
-	__webpack_require__(503);
+	__webpack_require__(497);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45093,7 +44914,7 @@
 	*/
 
 /***/ },
-/* 496 */
+/* 490 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45110,7 +44931,7 @@
 
 	var _reactBootstrap = __webpack_require__(224);
 
-	__webpack_require__(497);
+	__webpack_require__(491);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45162,14 +44983,14 @@
 	*/
 
 /***/ },
-/* 497 */
+/* 491 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 498 */,
-/* 499 */
+/* 492 */,
+/* 493 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45186,11 +45007,11 @@
 
 	var _reactBootstrap = __webpack_require__(224);
 
-	var _jquery = __webpack_require__(500);
+	var _jquery = __webpack_require__(494);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	__webpack_require__(501);
+	__webpack_require__(495);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45338,7 +45159,7 @@
 	*/
 
 /***/ },
-/* 500 */
+/* 494 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -55562,6 +55383,199 @@
 	return jQuery;
 	} );
 
+
+/***/ },
+/* 495 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 496 */,
+/* 497 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 498 */,
+/* 499 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(158);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactBootstrap = __webpack_require__(224);
+
+	var _AppPopover = __webpack_require__(500);
+
+	var _AppPopover2 = _interopRequireDefault(_AppPopover);
+
+	__webpack_require__(501);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PortfolioApp = function (_Component) {
+		_inherits(PortfolioApp, _Component);
+
+		function PortfolioApp() {
+			_classCallCheck(this, PortfolioApp);
+
+			return _possibleConstructorReturn(this, (PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).apply(this, arguments));
+		}
+
+		_createClass(PortfolioApp, [{
+			key: 'render',
+			value: function render() {
+				var _props = this.props;
+				var url = _props.url;
+				var img = _props.img;
+				var title = _props.title;
+				var text = _props.text;
+				var github = _props.github;
+				// let { show } = this.state;
+
+				// console.log("show: ", this.state.show);
+
+				return _react2.default.createElement(
+					'div',
+					{
+						className: 'PortfolioApp-main'
+					},
+					_react2.default.createElement(
+						'a',
+						{ href: url, target: '_blank' },
+						_react2.default.createElement(_reactBootstrap.Image, {
+							className: 'PortfolioApp-img',
+							src: img,
+							responsive: true
+						})
+					),
+					_react2.default.createElement(
+						'div',
+						{ id: 'PortfolioApp-text', className: 'text-center' },
+						_react2.default.createElement(
+							'p',
+							null,
+							title
+						),
+						_react2.default.createElement(
+							'h3',
+							null,
+							text
+						),
+						_react2.default.createElement(
+							'h5',
+							null,
+							'On Github:',
+							_react2.default.createElement(
+								'a',
+								{ href: github },
+								github
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return PortfolioApp;
+	}(_react.Component);
+
+	exports.default = PortfolioApp;
+
+	/*
+
+						
+
+
+		{
+			title: "GIF-Explosion",
+			text: "A 90s-tastic jQuery-powered experience.",
+			img: "/assets/images/prince.png",
+			url: "https://nlp-gif-explosion.herokuapp.com/"
+		},
+
+
+	*/
+
+/***/ },
+/* 500 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var AppPopover = function (_Component) {
+		_inherits(AppPopover, _Component);
+
+		function AppPopover() {
+			_classCallCheck(this, AppPopover);
+
+			return _possibleConstructorReturn(this, (AppPopover.__proto__ || Object.getPrototypeOf(AppPopover)).apply(this, arguments));
+		}
+
+		_createClass(AppPopover, [{
+			key: 'render',
+			value: function render() {
+
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(
+						'h3',
+						null,
+						this.props.title
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						this.props.text
+					)
+				);
+			}
+		}]);
+
+		return AppPopover;
+	}(_react.Component);
+
+	exports.default = AppPopover;
 
 /***/ },
 /* 501 */

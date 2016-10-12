@@ -3,8 +3,9 @@
 	margin: 0 auto;
 	margin-top: 3%;
 	margin-bottom: 3%;
-		border: 2px #CCCCCC solid;
-
+	border: 2px #CCCCCC solid;
+/*	background-image: url("/assets/images/patterns/chruch_@2X.png");
+*/	background-color: #EFEFF0;
 }
 
 .PortfolioApp-img{
@@ -12,15 +13,6 @@
 */	padding: 1%;
 	margin: auto;
 	width: 100%;
-}
-
-.PortfolioApp-overlay{
-	display: none;
-	z-index: 10;
-}
-
-.PortfolioApp-img:hover .PortfolioApp-overlay{
-	display: block;
 }
 
 @media screen and (max-width: 480px){

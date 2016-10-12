@@ -9,7 +9,7 @@ class PortfolioApp extends Component {
 
 	render() {
 
-		const { url, img, title, text } = this.props;
+		const { url, img, title, text, github } = this.props;
 		// let { show } = this.state;
 
 		// console.log("show: ", this.state.show);
@@ -17,8 +17,6 @@ class PortfolioApp extends Component {
 		return (
 			<div 
 				className="PortfolioApp-main"
-				onMouseEnter={this.mouseIn}
-				onMouseLeave={this.mouseOut}
 			>
 				<a href={url} target="_blank">
 					<Image 
@@ -28,9 +26,14 @@ class PortfolioApp extends Component {
 					/>
 				</a>
 
-				<div id="PortfolioApp-text">
-					<span><h3>{ title }</h3></span>
-					<span><p>{ text }</p></span>
+				<div id="PortfolioApp-text" className="text-center">
+					<p>{ title }</p>
+					<h3>{ text }</h3>
+					<h5>On Github:
+						<a href={github}>{ github }</a>
+					</h5>
+
+
 				</div>
 
 			</div>
