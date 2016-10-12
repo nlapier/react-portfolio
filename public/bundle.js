@@ -44806,45 +44806,23 @@
 	var PortfolioApp = function (_Component) {
 		_inherits(PortfolioApp, _Component);
 
-		function PortfolioApp(props) {
+		function PortfolioApp() {
 			_classCallCheck(this, PortfolioApp);
 
-			var _this = _possibleConstructorReturn(this, (PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).call(this, props));
-
-			_this.state = {
-				show: false
-			};
-			_this.mouseIn = _this.mouseIn.bind(_this);
-			_this.mouseOut = _this.mouseOut.bind(_this);
-			return _this;
+			return _possibleConstructorReturn(this, (PortfolioApp.__proto__ || Object.getPrototypeOf(PortfolioApp)).apply(this, arguments));
 		}
 
 		_createClass(PortfolioApp, [{
-			key: 'mouseIn',
-			value: function mouseIn(e) {
-				this.setState({ show: true });
-				console.log("enter state: ", this.state.show);
-			}
-		}, {
-			key: 'mouseOut',
-			value: function mouseOut(e) {
-				this.setState({ show: false });
-				console.log("leave state: ", this.state.show);
-			}
-		}, {
 			key: 'render',
 			value: function render() {
-				var _this2 = this;
-
 				var _props = this.props;
 				var url = _props.url;
 				var img = _props.img;
 				var title = _props.title;
 				var text = _props.text;
-				var show = this.state.show;
+				// let { show } = this.state;
 
-
-				console.log("show: ", this.state.show);
+				// console.log("show: ", this.state.show);
 
 				return _react2.default.createElement(
 					'div',
@@ -44863,16 +44841,26 @@
 						})
 					),
 					_react2.default.createElement(
-						_reactBootstrap.Overlay,
-						{
-							show: show,
-							animation: 'true',
-							container: this,
-							target: function target() {
-								return _reactDom2.default.findDOMNode(_this2.refs.target);
-							}
-						},
-						_react2.default.createElement(_AppPopover2.default, { title: title, text: text })
+						'div',
+						{ id: 'PortfolioApp-text' },
+						_react2.default.createElement(
+							'span',
+							null,
+							_react2.default.createElement(
+								'h3',
+								null,
+								title
+							)
+						),
+						_react2.default.createElement(
+							'span',
+							null,
+							_react2.default.createElement(
+								'p',
+								null,
+								text
+							)
+						)
 					)
 				);
 			}
