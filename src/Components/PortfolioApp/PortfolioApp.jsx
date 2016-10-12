@@ -27,12 +27,10 @@ class PortfolioApp extends Component {
 				</a>
 
 				<div id="PortfolioApp-text" className="text-center">
-					<p>{ title }</p>
 					<h3>{ text }</h3>
 					<h5>On Github:
 						<a href={github}>{ github }</a>
 					</h5>
-
 
 				</div>
 

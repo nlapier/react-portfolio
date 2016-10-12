@@ -44355,10 +44355,6 @@
 
 	var _Titlebar2 = _interopRequireDefault(_Titlebar);
 
-	var _Paragraph = __webpack_require__(485);
-
-	var _Paragraph2 = _interopRequireDefault(_Paragraph);
-
 	__webpack_require__(486);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -44725,18 +44721,37 @@
 
 				var text = "Here are some of the projects I'm working on...";
 
+				var apps = [{
+					title: "Fresh Hangman",
+					text: "A 90s-tastic jQuery-powered experience.",
+					img: "/assets/images/prince.png",
+					url: "https://nlp-fresh-hangman.herokuapp.com/",
+					github: "https://github.com/nlapier/Hangman"
+				}, {
+					title: "GIF-Explosion",
+					text: "A first-time attempt at retrieving data from a web API.",
+					img: "/assets/images/gif.png",
+					url: "https://nlp-gif-explosion.herokuapp.com/",
+					github: "https://github.com/nlapier/GIF-explosion"
+				}];
+
 				return _react2.default.createElement(
 					"div",
 					null,
 					_react2.default.createElement(_Titlebar2.default, { title: "My Portfolio" }),
+					_react2.default.createElement("br", null),
 					_react2.default.createElement(
 						_reactBootstrap.Row,
 						null,
-						_react2.default.createElement(_Paragraph2.default, { text: text, className: "Portfolio-p" })
+						_react2.default.createElement(
+							"p",
+							{ className: "text-center" },
+							text,
+							" "
+						)
 					),
 					apps.map(function (app) {
 						return _react2.default.createElement(_PortfolioApp2.default, {
-							title: app.title,
 							text: app.text,
 							img: app.img,
 							url: app.url,
@@ -44749,28 +44764,6 @@
 
 		return Portfolio;
 	}(_react.Component);
-
-	// function App (title, text, img, url){
-	// 	this.title = title,
-	// 	this.text = text,
-	// 	this.img = img,
-	// 	this.url = url
-	// }
-
-
-	var apps = [{
-		title: "Fresh Hangman",
-		text: "A 90s-tastic jQuery-powered experience.",
-		img: "/assets/images/prince.png",
-		url: "https://nlp-fresh-hangman.herokuapp.com/",
-		github: "test"
-	}, {
-		title: "GIF-Explosion",
-		text: "A first-time attempt at retrieving data from a web API.",
-		img: "/assets/images/gif.png",
-		url: "https://nlp-gif-explosion.herokuapp.com/",
-		github: "test"
-	}];
 
 	exports.default = Portfolio;
 
@@ -55473,11 +55466,6 @@
 					_react2.default.createElement(
 						'div',
 						{ id: 'PortfolioApp-text', className: 'text-center' },
-						_react2.default.createElement(
-							'p',
-							null,
-							title
-						),
 						_react2.default.createElement(
 							'h3',
 							null,
