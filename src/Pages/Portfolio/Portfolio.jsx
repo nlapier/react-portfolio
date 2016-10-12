@@ -3,7 +3,6 @@ import Bootstrap from "react-bootstrap";
 import {Grid, Row, Col} from "react-bootstrap";
 import Titlebar from "../../Components/Titlebar/Titlebar.jsx";
 import PortfolioApp from "../../Components/PortfolioApp/PortfolioApp.jsx";
-import Paragraph from "../../Components/Paragraph/Paragraph.jsx";
 import "./Portfolio.css";
 
 class Portfolio extends Component {
