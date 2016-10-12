@@ -70,6 +70,8 @@ class Contact extends Component {
 									)}
 								</Row>
 
+								<br />
+
 								<Row>
 									{this.state.showForm ? <ContactForm /> : null}
 								</Row>
