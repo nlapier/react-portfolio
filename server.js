@@ -21,8 +21,7 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, './index.html'));
 });
 
-//Slack messaging
-
+//Slack messaging - despite the route name, this actually uses a Slack webhook (a url held as an environmental variable) to slack me directly. 
 app.post('/email', (req, res) => {
 	request.post({
 		headers: {'content-type' : 'application/x-www-form-urlencoded'},

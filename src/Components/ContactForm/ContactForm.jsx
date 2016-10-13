@@ -16,7 +16,6 @@ class ContactForm extends Component {
 
 		this.handleEmailChange = this.handleEmailChange.bind(this);
 		this.handleMessageChange = this.handleMessageChange.bind(this);
-		this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
 		this.messageSubmit = this.messageSubmit.bind(this);
 		this.clearInput = this.clearInput.bind(this);
 	}
@@ -31,10 +30,6 @@ class ContactForm extends Component {
 
 	handleMessageChange(e) {
 		this.setState({ messageValue: e.target.value });
-	}
-
-	handleCheckboxChange(e) {
-		this.setState({boxIsChecked: !this.state.boxIsChecked})
 	}
 
 	clearInput(){
@@ -57,11 +52,13 @@ class ContactForm extends Component {
 	    });
 	    
 	    this.clearInput();
+	    return false;
 	}
 
 	render() {
 		return (
-			<form>
+			//Class from Animated.css - this animation helps draw attention when viewed in mobile.
+			<form className="animated fadeInDown">
 				<FormGroup controlId="formBasicText">
 
 					<ControlLabel>Your Message</ControlLabel>

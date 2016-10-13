@@ -44664,6 +44664,12 @@
 					img: "/assets/images/gif.png",
 					url: "https://nlp-gif-explosion.herokuapp.com/",
 					github: "https://github.com/nlapier/GIF-explosion"
+				}, {
+					title: "Bet the Future",
+					text: "A full-stack social media platform for tracking micro-wagers between friends",
+					img: "assets/images/bet.png",
+					url: "https://betthefuture.herokuapp.com/",
+					github: "https://github.com/eHatz/Bet-The-Future"
 				}];
 
 				return _react2.default.createElement(
@@ -44806,6 +44812,8 @@
 
 	/*
 
+<<<<<<< HEAD
+=======
 						
 
 
@@ -44817,6 +44825,7 @@
 		},
 
 
+>>>>>>> 4b147490379a074aedac21bf7007761baa5f7f30
 	*/
 
 /***/ },
@@ -45149,7 +45158,6 @@
 
 			_this.handleEmailChange = _this.handleEmailChange.bind(_this);
 			_this.handleMessageChange = _this.handleMessageChange.bind(_this);
-			_this.handleCheckboxChange = _this.handleCheckboxChange.bind(_this);
 			_this.messageSubmit = _this.messageSubmit.bind(_this);
 			_this.clearInput = _this.clearInput.bind(_this);
 			return _this;
@@ -45168,11 +45176,6 @@
 			key: "handleMessageChange",
 			value: function handleMessageChange(e) {
 				this.setState({ messageValue: e.target.value });
-			}
-		}, {
-			key: "handleCheckboxChange",
-			value: function handleCheckboxChange(e) {
-				this.setState({ boxIsChecked: !this.state.boxIsChecked });
 			}
 		}, {
 			key: "clearInput",
@@ -45197,43 +45200,47 @@
 				});
 
 				this.clearInput();
+				return false;
 			}
 		}, {
 			key: "render",
 			value: function render() {
-				return _react2.default.createElement(
-					"form",
-					null,
+				return (
+					//Class from Animated.css - this animation helps draw attention when viewed in mobile.
 					_react2.default.createElement(
-						_reactBootstrap.FormGroup,
-						{ controlId: "formBasicText" },
+						"form",
+						{ className: "animated fadeInDown" },
 						_react2.default.createElement(
-							_reactBootstrap.ControlLabel,
-							null,
-							"Your Message"
-						),
-						_react2.default.createElement(_reactBootstrap.FormControl, {
-							componentClass: "textarea",
-							value: this.state.messageValue,
-							placeholder: "Message",
-							onChange: this.handleMessageChange
-						}),
-						_react2.default.createElement(
-							_reactBootstrap.ControlLabel,
-							null,
-							"Where should I contact you?"
-						),
-						_react2.default.createElement(_reactBootstrap.FormControl, {
-							type: "text",
-							value: this.state.emailValue,
-							placeholder: "",
-							onChange: this.handleEmailChange
-						}),
-						_react2.default.createElement("br", null),
-						_react2.default.createElement(
-							_reactBootstrap.Button,
-							{ type: "submit", onClick: this.messageSubmit },
-							"Submit"
+							_reactBootstrap.FormGroup,
+							{ controlId: "formBasicText" },
+							_react2.default.createElement(
+								_reactBootstrap.ControlLabel,
+								null,
+								"Your Message"
+							),
+							_react2.default.createElement(_reactBootstrap.FormControl, {
+								componentClass: "textarea",
+								value: this.state.messageValue,
+								placeholder: "Message",
+								onChange: this.handleMessageChange
+							}),
+							_react2.default.createElement(
+								_reactBootstrap.ControlLabel,
+								null,
+								"Where should I contact you?"
+							),
+							_react2.default.createElement(_reactBootstrap.FormControl, {
+								type: "text",
+								value: this.state.emailValue,
+								placeholder: "",
+								onChange: this.handleEmailChange
+							}),
+							_react2.default.createElement("br", null),
+							_react2.default.createElement(
+								_reactBootstrap.Button,
+								{ type: "submit", onClick: this.messageSubmit },
+								"Submit"
+							)
 						)
 					)
 				);
