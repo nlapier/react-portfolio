@@ -44812,6 +44812,20 @@
 
 	/*
 
+<<<<<<< HEAD
+=======
+						
+
+
+		{
+			title: "GIF-Explosion",
+			text: "A 90s-tastic jQuery-powered experience.",
+			img: "/assets/images/prince.png",
+			url: "https://nlp-gif-explosion.herokuapp.com/"
+		},
+
+
+>>>>>>> 4b147490379a074aedac21bf7007761baa5f7f30
 	*/
 
 /***/ },
