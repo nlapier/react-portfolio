@@ -52,11 +52,13 @@ class ContactForm extends Component {
 	    });
 	    
 	    this.clearInput();
+	    return false;
 	}
 
 	render() {
 		return (
-			<form>
+			//Class from Animated.css - this animation helps draw attention when viewed in mobile.
+			<form className="animated fadeInDown">
 				<FormGroup controlId="formBasicText">
 
 					<ControlLabel>Your Message</ControlLabel>

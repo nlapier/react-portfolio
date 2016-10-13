@@ -28,7 +28,7 @@ class PortfolioApp extends Component {
 
 				<div id="PortfolioApp-text" className="text-center">
 					<h3>{ text }</h3>
-					<h5>On Github:
+					<h5>On Github: 
 						<a href={github}>{ github }</a>
 					</h5>
 
@@ -39,23 +39,10 @@ class PortfolioApp extends Component {
 	}
 }
 
-
 export default PortfolioApp;
 
 
-
 /*
-
-					
-
-
-	{
-		title: "GIF-Explosion",
-		text: "A 90s-tastic jQuery-powered experience.",
-		img: "/assets/images/prince.png",
-		url: "https://nlp-gif-explosion.herokuapp.com/"
-	},
-
 
 */
 
