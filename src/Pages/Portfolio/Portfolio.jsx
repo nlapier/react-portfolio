@@ -25,6 +25,13 @@ class Portfolio extends Component {
 				img: "/assets/images/gif.png",
 				url: "https://nlp-gif-explosion.herokuapp.com/",
 				github: "https://github.com/nlapier/GIF-explosion"
+			},
+			{
+				title: "Bet the Future",
+				text: "A full-stack social media platform for tracking micro-wagers between friends",
+				img: "assets/images/bet.png",
+				url: "https://betthefuture.herokuapp.com/",
+				github: "https://github.com/eHatz/Bet-The-Future"
 			}
 ];
 
