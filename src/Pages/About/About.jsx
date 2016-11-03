@@ -6,7 +6,11 @@ import "./About.css";
 class About extends Component {
 
 	render() {
-		const bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+		const welcomeText = "Welcome!"
+
+		const bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.  I'm an aspiring full-stack web developer with both self-starter experience and a formal education in web development from Rutgers Coding Bootcamp.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+
+		const moreText = "Please have a look at some of my projects in the Portfolio section.  You can view my code, find me on LinkedIn, and reach out to me directly on the Contact page."
 
 		return (
 
@@ -18,6 +22,15 @@ class About extends Component {
 
 					<Col xs={10}>
 
+						{/*
+												<Row className="show-grid About-welcome">
+						
+													<h1>{ welcomeText }</h1>
+						
+												</Row>
+						
+												<br/>
+						*/}
 						<Row className="show-grid">
 
 							<img 
@@ -31,11 +44,20 @@ class About extends Component {
 						</Row>
 
 						<br />
+
+						<Row className="show-grid">
+
+							<p>{ moreText }</p>
+
+						</Row> 
+
+						<br />
+						<br />
 						<br />
 						<br />
 
-						<Row className="text-center">
-							<p>
+						<Row className="text-center show-grid">
+							<p id="About-skillsHead">
 								In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:
 							</p>
 

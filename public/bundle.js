@@ -44377,7 +44377,11 @@
 		_createClass(About, [{
 			key: "render",
 			value: function render() {
-				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+				var welcomeText = "Welcome!";
+
+				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.  I'm an aspiring full-stack web developer with both self-starter experience and a formal education in web development from Rutgers Coding Bootcamp.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+
+				var moreText = "Please have a look at some of my projects in the Portfolio section.  You can view my code, find me on LinkedIn, and reach out to me directly on the Contact page.";
 
 				return _react2.default.createElement(
 					"div",
@@ -44405,14 +44409,25 @@
 								)
 							),
 							_react2.default.createElement("br", null),
+							_react2.default.createElement(
+								_reactBootstrap.Row,
+								{ className: "show-grid" },
+								_react2.default.createElement(
+									"p",
+									null,
+									moreText
+								)
+							),
+							_react2.default.createElement("br", null),
+							_react2.default.createElement("br", null),
 							_react2.default.createElement("br", null),
 							_react2.default.createElement("br", null),
 							_react2.default.createElement(
 								_reactBootstrap.Row,
-								{ className: "text-center" },
+								{ className: "text-center show-grid" },
 								_react2.default.createElement(
 									"p",
-									null,
+									{ id: "About-skillsHead" },
 									"In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:"
 								),
 								_react2.default.createElement(
@@ -44666,10 +44681,16 @@
 					github: "https://github.com/nlapier/GIF-explosion"
 				}, {
 					title: "Bet the Future",
-					text: "A full-stack social media platform for tracking micro-wagers between friends",
-					img: "assets/images/bet.png",
+					text: "A full-stack, Handlebars.js-based social media platform for tracking micro-wagers between friends.",
+					img: "/assets/images/bet.png",
 					url: "https://betthefuture.herokuapp.com/",
 					github: "https://github.com/eHatz/Bet-The-Future"
+				}, {
+					title: "Bootcampspot 2.0",
+					img: "/assets/images/bootcamspot2.png",
+					url: "http://bootcampspot2.herokuapp.com/",
+					github: "https://github.com/eHatz",
+					text: "A complete rewrite of Rutgers Coding Bootcamp's student portal using React, Node, Express and MySQL."
 				}];
 
 				return _react2.default.createElement(
