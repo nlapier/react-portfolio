@@ -44377,7 +44377,7 @@
 		_createClass(About, [{
 			key: "render",
 			value: function render() {
-				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I am currently studying full stack web development at Rutgers Coding Bootcamp,  with the goal of working as a junior developer when I graduate in October.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I began my web development career, .  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
 
 				return _react2.default.createElement(
 					"div",
@@ -44667,9 +44667,15 @@
 				}, {
 					title: "Bet the Future",
 					text: "A full-stack social media platform for tracking micro-wagers between friends",
-					img: "assets/images/bet.png",
+					img: "/assets/images/bet.png",
 					url: "https://betthefuture.herokuapp.com/",
 					github: "https://github.com/eHatz/Bet-The-Future"
+				}, {
+					title: "Bootcampspot 2.0",
+					img: "/assets/images/bootcamspot2.png",
+					url: "http://bootcampspot2.herokuapp.com/",
+					github: "https://github.com/eHatz",
+					text: "A complete rewrite of Rutger's Coding Bootcamp's student portal using React, Node, Express and MySQL"
 				}];
 
 				return _react2.default.createElement(
