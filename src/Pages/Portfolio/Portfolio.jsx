@@ -28,7 +28,7 @@ class Portfolio extends Component {
 			},
 			{
 				title: "Bet the Future",
-				text: "A full-stack social media platform for tracking micro-wagers between friends",
+				text: "A full-stack, Handlebars.js-based social media platform for tracking micro-wagers between friends.",
 				img: "/assets/images/bet.png",
 				url: "https://betthefuture.herokuapp.com/",
 				github: "https://github.com/eHatz/Bet-The-Future"
@@ -38,7 +38,7 @@ class Portfolio extends Component {
 				img: "/assets/images/bootcamspot2.png",
 				url:"http://bootcampspot2.herokuapp.com/",
 				github: "https://github.com/eHatz",
-				text: "A complete rewrite of Rutger's Coding Bootcamp's student portal using React, Node, Express and MySQL"
+				text: "A complete rewrite of Rutgers Coding Bootcamp's student portal using React, Node, Express and MySQL."
 			}
 		];
 
