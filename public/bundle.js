@@ -44377,7 +44377,11 @@
 		_createClass(About, [{
 			key: "render",
 			value: function render() {
-				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.   I began my web development career, .  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+				var welcomeText = "Welcome!  My name is Nathaniel LaPier; thanks for visting my site.";
+
+				var bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.  I'm an aspiring full-stack web developer with both self-starter experience and a formal education in web development from Rutgers Coding Bootcamp.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+
+				var moreText = "Please have a look at some of my projects in the Portfolio section.  You can view my code, find me on LinkedIn, and reach out to me directly on the Contact page.";
 
 				return _react2.default.createElement(
 					"div",
@@ -44390,6 +44394,16 @@
 						_react2.default.createElement(
 							_reactBootstrap.Col,
 							{ xs: 10 },
+							_react2.default.createElement(
+								_reactBootstrap.Row,
+								{ className: "show-grid About-welcome" },
+								_react2.default.createElement(
+									"h1",
+									null,
+									welcomeText
+								)
+							),
+							_react2.default.createElement("br", null),
 							_react2.default.createElement(
 								_reactBootstrap.Row,
 								{ className: "show-grid" },

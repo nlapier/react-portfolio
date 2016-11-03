@@ -47,11 +47,15 @@
 
 
 
-	.About-skills{    
+	.About-welcome{
+	text-align: center;
+	padding-bottom: 3%;
+}
+
+.About-skills{    
 	padding-left: 20px;
     padding-right: 20px;
-/*    border-left: 2px #CCCCCC solid;
-*/    font-size: 18pt;
+    font-size: 18pt;
 }
 
 .About-headshot{
@@ -67,8 +71,7 @@
 	.About-skills{    
 	padding-left: 20px;
     padding-right: 20px;
-/*    border-left: 2px #CCCCCC solid;
-*/    font-size: 15pt;
+	font-size: 15pt;
 }
 	.About-headshot{
 		max-width: auto;
