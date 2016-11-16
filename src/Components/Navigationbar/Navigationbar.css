@@ -12,15 +12,27 @@
 
 .Navigationbar-links{
 	font-size: 12pt;
+	transition-duration: 0.40s;
+    transition-property: transform;
 }
 
-.Navigationbar-links:hover{
-	color: #80C978;
+.Navigationbar-links:hover, focus, active {
+	color: black;
+	transform: scale(1.2);
 }
 
 
 
 /*
+
+
+	transition-duration: 0.50s;
+    transition-property: transform;
+}
+
+.ContactIcon-thumb:hover, focus, active {
+    transform: scale(1.4);
+}
 
 .navbar-default, .navbar-brand{
 	font-size: 28pt;

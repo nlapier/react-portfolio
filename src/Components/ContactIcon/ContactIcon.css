@@ -11,4 +11,16 @@
     transform: scale(1.4);
 }
 
+@media (max-width: 767px){
+	
+	.ContactIcon-thumb {
+		transition-duration: 0.20s;
+	    transition-property: transform;
+	}
+
+	.ContactIcon-thumb:hover, focus, active {
+	    transform: scale(1.1);
+	}
+
+}
 
