@@ -21,6 +21,14 @@
 	transform: scale(1.2);
 }
 
+@media (max-width: 767px){
+
+	.Navigationbar-links:hover, focus, active {
+		transform: none;
+	}
+
+}
+
 
 
 /*
