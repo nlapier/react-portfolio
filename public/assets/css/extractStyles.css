@@ -125,7 +125,15 @@
 	border: 0px;
 	width: 60%;
 	margin: 0 auto;
+	transition-duration: 0.50s;
+    transition-property: transform;
 }
+
+.ContactIcon-thumb:hover, focus, active {
+    transform: scale(1.4);
+}
+
+
 .ContactForm_main{
 	border: 2px #CCCCCC solid;
 }/*.Contact-main{
