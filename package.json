@@ -28,6 +28,7 @@
     "react-imageloader": "^2.1.0",
     "react-router": "^2.8.1",
     "request": "^2.75.0",
+    "smoothscroll": "^0.2.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack-isomorphic-tools": "^2.5.8"
