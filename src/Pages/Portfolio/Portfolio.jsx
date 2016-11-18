@@ -55,12 +55,13 @@ class Portfolio extends Component {
 
 				</Row>
 
-				{apps.map((app) => 
+				{apps.map((app, index) => 
 					<PortfolioApp
 						text={app.text}					
 						img={app.img}
 						url={app.url}
 						github={app.github}
+						key={"Portfolio-", index}
 					/>
 				)}
 				
