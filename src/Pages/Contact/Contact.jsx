@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
-import smoothScroll from "smoothscroll";
+// import smoothScroll from "smoothscroll";
 import Titlebar from "../../Components/Titlebar/Titlebar.jsx";
 import ContactIcon from "../../Components/ContactIcon/ContactIcon.jsx";
 import ContactForm from "../../Components/ContactForm/ContactForm.jsx"
@@ -22,8 +22,8 @@ class Contact extends Component {
 
 	handleClick(){
 		this.setState({showForm: !this.state.showForm});
-		let formRow = document.querySelector("#Contact-formRow")
-		smoothScroll(formRow);
+		// let formRow = document.querySelector("#Contact-formRow")
+		// smoothScroll(formRow);
 	}
 
 	render() {
