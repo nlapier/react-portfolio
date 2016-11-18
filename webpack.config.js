@@ -6,7 +6,7 @@ module.exports = {
 
   output: {
     filename: "bundle.js",
-    path: "./public"
+    path: "./public/webpack"
   },
 
   devtool: 'cheap-source-map',
@@ -36,7 +36,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin("public/assets/css/extractStyles.css")
+    new ExtractTextPlugin("webpackStyles.css")
   ],
 
   resolve: {
