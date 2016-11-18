@@ -3,4 +3,6 @@ npm-debug.log
 .DS_Store
 bundle.js.map
 bundle.js
+extractStyles.css
+extractStyles.css.map
 .env
