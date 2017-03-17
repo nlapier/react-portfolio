@@ -5,7 +5,9 @@ const text = {
 
 	moreText: "Please have a look at some of my projects in the Portfolio section.  You can view my code, find me on LinkedIn, and reach out to me directly on the Contact page.",
 
-	inAddition: "In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:"
+	inAddition: "In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:",
+
+	skills: ["jQuery", "Node.js," "Express.js", "Firebase", "MySQL & Sequelize", "MongoDB & Mongoose", "React.js"]
 
 }
 

@@ -86,25 +86,3 @@ class About extends Component {
 
 export default About;
 
-
-
-/*
-
-<img src="https://avatars2.githubusercontent.com/u/17186793?v=3&s=400" alt="Nathaniel LaPier" className="img-circle img-responsive col-md-4" />
-
-
-		import ImageLoader from "react-imageloader";
-
-
-				<ImageLoader src="./Headshot2.jpg" wrapper={React.DOM.div} preloader={this.preloader}>
-				Image did not load
-				</ImageLoader>
-
-
-// import headshot from "./Headshot2.jpg";
-
-				<img src={headshot} alt="Nathaniel LaPier" className="img-circle img-responsive col-md-3" />
-				npm install imagemin-pngquant imagemin-svgo imagemin-optipng imagemin-jpegtran imagemin-gifsicle file-loader imagemin loader-utils
-
-*/
-
