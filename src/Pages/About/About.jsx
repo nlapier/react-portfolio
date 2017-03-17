@@ -7,11 +7,13 @@ import text from "../../text.js";
 class About extends Component {
 
 	render() {
-		const welcomeText = "Welcome!"
+		const welcomeText = text.welcomeText;
 
-		const bioText = "Born and raised in Austin, TX, I studied economics at Trinity University before moving to New York City in 2010.  I'm an aspiring full-stack web developer with both self-starter experience and a formal education in web development from Rutgers Coding Bootcamp.  I pay my bills working as a handyman on Taskrabbit, and a courier on UberRUSH. When I'm not coding or working, I like to explore, volunteer, ride my bicycle and motorcycle, root for the Spurs, and plot to import breakfast tacos and the word \"y'all\" to NYC.";
+		const bioText = text.bioText;
 
-		const moreText = "Please have a look at some of my projects in the Portfolio section.  You can view my code, find me on LinkedIn, and reach out to me directly on the Contact page."
+		const moreText = text.moreText
+
+		const inAddition = text.inAddition
 
 		return (
 
@@ -59,7 +61,7 @@ class About extends Component {
 
 						<Row className="text-center show-grid">
 							<p id="About-skillsHead">
-								In addition to HTML, CSS and vanilla JavaScript, I can hold my own using:
+								{ inAddition }
 							</p>
 
 							<ul className="list-inline text-center">
