@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Grid, Row, Col} from "react-bootstrap";
 import Titlebar from "../../Components/Titlebar/Titlebar.jsx";
 import "./About.css";
+import text from "../../text.js";
 
 class About extends Component {
 
