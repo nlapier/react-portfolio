@@ -1,19 +1,13 @@
 import React, { Component } from "react";
 import {Grid, Row, Col} from "react-bootstrap";
 import Titlebar from "../../Components/Titlebar/Titlebar.jsx";
+import AboutSkill from "../../Components/AboutSkill/AboutSkill.jsx";
 import "./About.css";
-import text from "../../text.js";
+import {welcomeText, bioText, moreText, inAddition, skills} from "../../text.js";
 
 class About extends Component {
 
 	render() {
-		const welcomeText = text.welcomeText;
-
-		const bioText = text.bioText;
-
-		const moreText = text.moreText
-
-		const inAddition = text.inAddition
 
 		return (
 
@@ -64,14 +58,13 @@ class About extends Component {
 								{ inAddition }
 							</p>
 
-							<ul className="list-inline text-center">
-								<li className="About-skills">&lt;jQuery&gt;</li>
-								<li className="About-skills">&lt;Node.js&gt;</li>
-								<li className="About-skills">&lt;Express.js&gt;</li>
-								<li className="About-skills">&lt;Firebase&gt;</li>
-								<li className="About-skills">&lt;MySQL & Sequelize&gt;</li>
-								<li className="About-skills">&lt;MongoDB & Mongoose&gt;</li>
-								<li className="About-skills">&lt;React.js&gt;</li>
+							<ul className ="list-inline text-center">
+								{skills.map((skill, index) => 
+									<AboutSkill
+										text={skill}					
+										key={"AboutSkill-", index}
+									/>
+								)}
 							</ul>
 						</Row>
 					</Col>

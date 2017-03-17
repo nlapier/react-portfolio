@@ -13,12 +13,6 @@
 	font-style: italic;
 }
 
-.About-skills{    
-	padding-left: 20px;
-    padding-right: 20px;
-    font-size: 18pt;
-}
-
 .About-headshot{
 	float: right;
 	max-width: 200px;
@@ -29,11 +23,6 @@
 
 @media screen and (max-width: 480px) {
 
-	.About-skills{    
-	padding-left: 20px;
-    padding-right: 20px;
-	font-size: 15pt;
-}
 	.About-headshot{
 		max-width: auto;
 		max-height: auto;
