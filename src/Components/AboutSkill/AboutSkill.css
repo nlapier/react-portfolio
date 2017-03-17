@@ -1,0 +1,11 @@
+.AboutSkill-main{    
+	padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18pt;
+}
+
+@media screen and (max-width: 480px) {
+	.AboutSkill-main{    
+	    font-size: 15pt;
+	}
+}

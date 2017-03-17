@@ -4,6 +4,7 @@ import { Grid, Row, Col } from "react-bootstrap";
 import Titlebar from "../../Components/Titlebar/Titlebar.jsx";
 import ContactIcon from "../../Components/ContactIcon/ContactIcon.jsx";
 import ContactForm from "../../Components/ContactForm/ContactForm.jsx"
+import {contacts} from "../../text.js";
 import "./Contact.css";
 
 
@@ -27,29 +28,6 @@ class Contact extends Component {
 	}
 
 	render() {
-		const contacts = [
-			{
-				img: "/assets/images/linkedin.png",
-				url: "https://www.linkedin.com/in/nathaniel-lapier-6637244a",
-				text: "LinkedIn",
-				target:"_blank",
-				onClick: null
-			},
-			{
-				img: "/assets/images/github.png",
-				url: "https://github.com/nlapier",
-				text: "Github",
-				target:"_blank",
-				onClick: null
-			},
-			{
-				img: "/assets/images/email.png",
-				url: "#",
-				text: "Email",
-				target: "#",
-				onClick: this.handleClick
-			}
-		]
 
 		return (
 			<div>
@@ -68,7 +46,7 @@ class Contact extends Component {
 											url={contact.url}
 											text={contact.text}
 											target={contact.target}
-											onClick={contact.onClick}
+											onClick={contact.text === "Email" ? this.handleClick : null}
 											key={"Contact-", index}
 										/>
 									)}

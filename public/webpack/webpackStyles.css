@@ -67,7 +67,17 @@
 
 
 
-	.About-welcome{
+	.AboutSkill-main{    
+	padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18pt;
+}
+
+@media screen and (max-width: 480px) {
+	.AboutSkill-main{    
+	    font-size: 15pt;
+	}
+}.About-welcome{
 	font-family: 'Open Sans', sans-serif;;
 	text-align: center;
 	font-weight: 600;
@@ -82,12 +92,6 @@
 	font-style: italic;
 }
 
-.About-skills{    
-	padding-left: 20px;
-    padding-right: 20px;
-    font-size: 18pt;
-}
-
 .About-headshot{
 	float: right;
 	max-width: 200px;
@@ -98,11 +102,6 @@
 
 @media screen and (max-width: 480px) {
 
-	.About-skills{    
-	padding-left: 20px;
-    padding-right: 20px;
-	font-size: 15pt;
-}
 	.About-headshot{
 		max-width: auto;
 		max-height: auto;
