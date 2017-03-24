@@ -39,8 +39,8 @@ const text = {
 			text: "A complete rewrite of Rutgers Coding Bootcamp's student portal using React, Node, Express and MySQL."
 		},
 		{
-			title: "This Portfolio!",
-			text: "A basic 'WREN'(Webpack-React-Express-Node) webpage.",
+			title: "My Portfolio",
+			text: "This website: A basic responsive 'WREN'(Webpack-React-Express-Node) webpage.",
 			img: "/assets/images/portfolio.png",
 			url: "https://github.com/nlapier/react-portfolio",
 			github: "https://github.com/nlapier/react-portfolio"
