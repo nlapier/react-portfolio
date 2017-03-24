@@ -11,6 +11,10 @@ const text = {
 
 	apps: [
 		{
+			
+			
+		},
+		{
 			title: "Fresh Hangman",
 			text: "A 90s-tastic jQuery-powered experience.",
 			img: "/assets/images/prince.png",
