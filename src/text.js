@@ -11,10 +11,6 @@ const text = {
 
 	apps: [
 		{
-			
-			
-		},
-		{
 			title: "Fresh Hangman",
 			text: "A 90s-tastic jQuery-powered experience.",
 			img: "/assets/images/prince.png",
@@ -41,6 +37,13 @@ const text = {
 			url:"http://bootcampspot2.herokuapp.com/",
 			github: "https://github.com/eHatz",
 			text: "A complete rewrite of Rutgers Coding Bootcamp's student portal using React, Node, Express and MySQL."
+		},
+		{
+			title: "This Portfolio!",
+			text: "A basic 'WREN'(Webpack-React-Express-Node) webpage.",
+			img: "/assets/images/portfolio.png",
+			url: "https://github.com/nlapier/react-portfolio",
+			github: "https://github.com/nlapier/react-portfolio"
 		}
 	],
 
