@@ -11,6 +11,20 @@ const text = {
 
 	apps: [
 		{
+			title: "Bootcampspot 2.0",
+			img: "/assets/images/bootcamspot2.png",
+			url:"http://bootcampspot2.herokuapp.com/",
+			github: "https://github.com/eHatz",
+			text: "A complete rewrite of Rutgers Coding Bootcamp's student portal using React, Node, Express and MySQL."
+		},
+		{
+			title: "My Portfolio",
+			text: "This website: A basic responsive 'WREN'(Webpack-React-Express-Node) webpage.",
+			img: "/assets/images/portfolio.png",
+			url: "https://github.com/nlapier/react-portfolio",
+			github: "https://github.com/nlapier/react-portfolio"
+		},
+		{
 			title: "Fresh Hangman",
 			text: "A 90s-tastic jQuery-powered experience.",
 			img: "/assets/images/prince.png",
@@ -30,20 +44,6 @@ const text = {
 			img: "/assets/images/bet.png",
 			url: "https://betthefuture.herokuapp.com/",
 			github: "https://github.com/eHatz/Bet-The-Future"
-		},
-		{
-			title: "Bootcampspot 2.0",
-			img: "/assets/images/bootcamspot2.png",
-			url:"http://bootcampspot2.herokuapp.com/",
-			github: "https://github.com/eHatz",
-			text: "A complete rewrite of Rutgers Coding Bootcamp's student portal using React, Node, Express and MySQL."
-		},
-		{
-			title: "My Portfolio",
-			text: "This website: A basic responsive 'WREN'(Webpack-React-Express-Node) webpage.",
-			img: "/assets/images/portfolio.png",
-			url: "https://github.com/nlapier/react-portfolio",
-			github: "https://github.com/nlapier/react-portfolio"
 		}
 	],
 
